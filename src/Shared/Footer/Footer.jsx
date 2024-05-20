@@ -32,12 +32,18 @@ const Footer = () => {
           </div>
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
-          <div className=" menu">
+          <div className=" menu space-y-1 font-medium">
             <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <Link to="/bestSell">
+              <a className="link link-hover hover:text-green-500">Best Sell</a>
+            </Link>
+            <Link to="/about">
+              <a className="link link-hover hover:text-green-500">About us</a>
+            </Link>
+
+            <Link to="/contact">
+              <a className="link link-hover hover:text-green-500">Contact us</a>
+            </Link>
           </div>
           <div>
             <form>
@@ -61,6 +67,12 @@ const Footer = () => {
           </div>
         </div>
       </section>
+      <hr />
+      <footer className="footer footer-center p-4 bg-gradient-to-r from-green-300 via-red-200 to-green-300  text-base-content">
+        <aside>
+          <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
+        </aside>
+      </footer>
     </>
   );
 };
