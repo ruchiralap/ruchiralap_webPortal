@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* header mobile menu open & close */
-.transition-height {
-  transition: height 5s ease;
+.bg-flag {
+  background-image: linear-gradient(
+      90deg,
+      #006a4e 50%,
+      /* Green */ #f42a41 50% /* Red */
+    ),
+    radial-gradient(
+      circle at center,
+      #f42a41 0%,
+      /* Red */ #f42a41 20%,
+      /* Red */ transparent 20%
+    );
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
