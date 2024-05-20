@@ -3,17 +3,8 @@
 @tailwind utilities;
 
 .bg-flag {
-  background-image: linear-gradient(
-      90deg,
-      #006a4e 50%,
-      /* Green */ #f42a41 50% /* Red */
-    ),
-    radial-gradient(
-      circle at center,
-      #f42a41 0%,
-      /* Red */ #f42a41 20%,
-      /* Red */ transparent 20%
-    );
+  background-image: linear-gradient(90deg, #006a4e 50%, #f42a41 50%),
+    radial-gradient(circle at center, #f42a41 0%, #f42a41 20%, transparent 20%);
   background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;

@@ -1,6 +1,7 @@
-import { AlignLeft, ChevronRight, Search, ShoppingCart, X } from "lucide-react";
+import { AlignLeft, ChevronRight, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import IsSearch from "./IsSearch";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,21 +78,18 @@ function Header() {
             </div>
           </div>
 
-          <div className="flex-shrink-0 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+          <div className="flex-shrink-0 flex md:items-center md:justify-center absolute md:left-1/2 transform md:-translate-x-1/2 ml-11">
             <Link to="/">
-              <h3 className="md:text-4xl text-xl font-mono bg-flag">
+              <h3 className=" md:text-4xl font-mono bg-flag mr-20">
                 Ruchir Alap
               </h3>
             </Link>
           </div>
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button className="p-1 rounded-full text-gray-400 hover:text-white">
-              <span className="sr-only">Search</span>
-              <Search />
-            </button>
+            <IsSearch />
 
-            <button className="ml-4 p-1 rounded-full text-gray-400 hover:text-white">
+            <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
               <span className="sr-only">View Cart</span>
               <ShoppingCart />
             </button>
@@ -120,6 +118,22 @@ function Header() {
               }
             >
               Home
+            </NavLink>
+            <ChevronRight />
+          </div>
+          <hr />
+          <div className=" flex items-center justify-between">
+            <NavLink
+              to="/bestSell"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "text-red-300"
+                  : isActive
+                  ? "text-green-600 font-bold"
+                  : "text-slate-700"
+              }
+            >
+              Best Sell
             </NavLink>
             <ChevronRight />
           </div>
