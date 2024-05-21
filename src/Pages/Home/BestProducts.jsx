@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAllProducts from "../../Hooks/useAllProducts";
 
 const BestProducts = () => {
@@ -19,14 +20,18 @@ const BestProducts = () => {
                 className=" border rounded-md p-5 border-orange-100 shadow-md hover:shadow-2xl hover:shadow-orange-50"
               >
                 <div>
-                  <img
-                    className=" rounded-md"
-                    src={product?.product_image}
-                    alt="Product Image"
-                  />
+                  <Link to={`/productDetails/${product?._id}`}>
+                    <img
+                      className=" rounded-md"
+                      src={product?.product_image}
+                      alt="Product Image"
+                    />
+                  </Link>
                 </div>
                 <div className=" text-slate-200 font-medium text-center space-y-4 py-5">
-                  <h4>{product?.product_name}</h4>
+                  <Link to={`/productDetails/${product?._id}`}>
+                    <h4>{product?.product_name}</h4>
+                  </Link>
                   <p className=" text-slate-400">
                     <span>Tk</span> {product?.price}
                   </p>
