@@ -7,7 +7,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800 fixed w-full">
+    <nav className="bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -39,7 +39,7 @@ function Header() {
                   Home
                 </NavLink>
                 <NavLink
-                  to="/bestSell"
+                  to="/allProducts"
                   className={({ isActive, isPending }) =>
                     isPending
                       ? "text-red-300"
@@ -48,7 +48,7 @@ function Header() {
                       : "text-slate-100"
                   }
                 >
-                  Best Sell
+                  All Products
                 </NavLink>
                 <NavLink
                   to="/about"
@@ -108,6 +108,22 @@ function Header() {
           <hr />
           <div className=" flex items-center justify-between">
             <NavLink
+              to="/allProducts"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "text-red-300"
+                  : isActive
+                  ? "text-slate-100 font-bold"
+                  : "text-slate-100"
+              }
+            >
+              All Products
+            </NavLink>
+            <ChevronRight />
+          </div>
+          <hr />
+          <div className=" flex items-center justify-between">
+            <NavLink
               to="/"
               className={({ isActive, isPending }) =>
                 isPending
@@ -121,22 +137,7 @@ function Header() {
             </NavLink>
             <ChevronRight />
           </div>
-          <hr />
-          <div className=" flex items-center justify-between">
-            <NavLink
-              to="/bestSell"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "text-red-300"
-                  : isActive
-                  ? "text-slate-100 font-bold"
-                  : "text-slate-100"
-              }
-            >
-              Best Sell
-            </NavLink>
-            <ChevronRight />
-          </div>
+
           <hr />
           <div className=" flex items-center justify-between">
             <NavLink

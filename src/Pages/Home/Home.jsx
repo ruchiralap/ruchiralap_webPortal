@@ -1,6 +1,11 @@
+import BestProducts from "./BestProducts";
+
 const Home = () => {
-  return <>
-  d</>;
+  return (
+    <>
+      <BestProducts />
+    </>
+  );
 };
 
 export default Home;

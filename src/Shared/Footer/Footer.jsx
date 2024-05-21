@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800 hover:cursor-pointer w-full">
+      <div className="bg-gradient-to-r mt-20 from-slate-800 via-slate-500 to-slate-800 hover:cursor-pointer w-full">
         <h3 className=" text-xl font-medium text-center py-2 text-slate-100 ">
           Back to top
         </h3>
@@ -14,8 +14,8 @@ const Footer = () => {
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-4xl font-mono bg-flag mr-20">
-                Ruchir <span className=" text-red-500">Alap</span>
+              <h3 className=" md:text-4xl font-mono text-slate-50 mr-20">
+                Ruchir <span className=" text-slate-400">Alap</span>
               </h3>
             </Link>
             <p className=" text-sm text-slate-400 mt-2">
