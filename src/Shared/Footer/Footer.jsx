@@ -64,9 +64,9 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="username@site.com"
-                    className=" border-none input focus:outline-none join-item"
+                    className=" border border-slate-700 input focus:outline-none join-item bg-transparent"
                   />
-                  <button className="btn bg-gradient-to-r from-green-700 via-red-600 to-green-700 join-item border-none text-slate-50">
+                  <button className="btn border hover:bg-gradient-to-r bg-transparent from-orange-500 via-yellow-200 to-orange-100 join-item border-slate-700 hover:text-slate-800">
                     Subscribe
                   </button>
                 </div>
