@@ -7,7 +7,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-green-100 via-red-100 to-green-100 fixed w-full">
+    <nav className="bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800 fixed w-full">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -32,8 +32,8 @@ function Header() {
                     isPending
                       ? "text-red-300"
                       : isActive
-                      ? "text-green-600 font-bold"
-                      : "text-slate-700"
+                      ? "text-slate-100 font-bold"
+                      : "text-slate-100"
                   }
                 >
                   Home
@@ -44,8 +44,8 @@ function Header() {
                     isPending
                       ? "text-red-300"
                       : isActive
-                      ? "text-green-600 font-bold"
-                      : "text-slate-700"
+                      ? "text-slate-100 font-bold"
+                      : "text-slate-100"
                   }
                 >
                   Best Sell
@@ -56,8 +56,8 @@ function Header() {
                     isPending
                       ? "text-red-300"
                       : isActive
-                      ? "text-green-600 font-bold"
-                      : "text-slate-700"
+                      ? "text-slate-100 font-bold"
+                      : "text-slate-100"
                   }
                 >
                   About
@@ -68,8 +68,8 @@ function Header() {
                     isPending
                       ? "text-red-300"
                       : isActive
-                      ? "text-green-600 font-bold"
-                      : "text-slate-700"
+                      ? "text-slate-100 font-bold"
+                      : "text-slate-100"
                   }
                 >
                   Contact
@@ -113,8 +113,8 @@ function Header() {
                 isPending
                   ? "text-red-300"
                   : isActive
-                  ? "text-green-600 font-bold"
-                  : "text-slate-700"
+                  ? "text-slate-100 font-bold"
+                  : "text-slate-100"
               }
             >
               Home
@@ -129,8 +129,8 @@ function Header() {
                 isPending
                   ? "text-red-300"
                   : isActive
-                  ? "text-green-600 font-bold"
-                  : "text-slate-700"
+                  ? "text-slate-100 font-bold"
+                  : "text-slate-100"
               }
             >
               Best Sell
@@ -145,8 +145,8 @@ function Header() {
                 isPending
                   ? "text-red-300"
                   : isActive
-                  ? "text-green-600 font-bold"
-                  : "text-slate-700"
+                  ? "text-slate-100 font-bold"
+                  : "text-slate-100"
               }
             >
               About
@@ -161,8 +161,8 @@ function Header() {
                 isPending
                   ? "text-red-300"
                   : isActive
-                  ? "text-green-600 font-bold"
-                  : "text-slate-700"
+                  ? "text-slate-100 font-bold"
+                  : "text-slate-100"
               }
             >
               Contact
