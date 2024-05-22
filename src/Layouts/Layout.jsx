@@ -6,7 +6,7 @@ const Layouts = () => {
   return (
     <>
       <Header />
-      <div className=" min-h-screen w-11/12 mx-auto">
+      <div className=" ">
         <Outlet />
       </div>
       <Footer />
