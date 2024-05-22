@@ -14,22 +14,23 @@ const Category = () => {
             Our Top Collection's
           </h2>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {allCategory &&
             allCategory?.map((category) => (
-              <div
-                key={category?._id}
-                className=" border rounded-md border-orange-100 hover:shadow-2xl hover:shadow-orange-100"
-              >
+              <div key={category?._id} className="">
                 <Link to={`/productPage/${category?._id}`}>
                   <div>
-                    <div className="avatar p-5">
+                    <div className="avatar border rounded-full border-[#201700]">
                       <div className="rounded-full">
-                        <img src={category?.category_image} />
+                        <img
+                          className=" w-full mx-auto"
+                          src={category?.category_image}
+                          alt="Category Image"
+                        />
                       </div>
                     </div>
-                    <div className=" bg-slate-800 rounded-md rounded-t-3xl">
-                      <p className=" text-xl font-medium text-slate-300 text-center py-4">
+                    <div className="">
+                      <p className=" text-xl font-medium text-[#443930] text-center py-4 hover:underline">
                         {category?.category_name}
                       </p>
                     </div>

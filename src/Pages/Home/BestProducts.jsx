@@ -18,18 +18,18 @@ const BestProducts = () => {
             allProducts?.map((product) => (
               <div
                 key={product?._id}
-                className="bg-[#F0EBD8] rounded-3xl p-5 shadow-md"
+                className="bg-[#F0EBD8] rounded-3xl shadow-md"
               >
-                <div>
+                <div className=" bg-transparent rounded-3xl">
                   <Link to={`/productDetails/${product?._id}`}>
                     <img
-                      className=" w-full mx-auto rounded-2xl"
+                      className=" w-full mx-auto rounded-3xl"
                       src={product?.product_image}
                       alt="Product Image"
                     />
                   </Link>
                 </div>
-                <div className=" flex items-center justify-between pt-5">
+                <div className=" flex items-center justify-between p-5">
                   <div className="text-[#443930]">
                     <Link to={`/productDetails/${product?._id}`}>
                       <h4 className=" text-xl font-semibold">
