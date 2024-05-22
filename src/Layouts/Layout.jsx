@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
+import Banner from "../Pages/Home/Banner/Banner";
 
 const Layouts = () => {
   return (
     <>
       <Header />
-      <div className=" min-h-screen w-11/12 mx-auto">
+      <div className=" ">
         <Outlet />
       </div>
       <Footer />

@@ -8,7 +8,7 @@ const Category = () => {
 
   return (
     <>
-      <div className=" mt-44">
+      <div className=" w-11/12 mx-auto mt-44">
         <div>
           <h2 className=" text-3xl font-extrabold text-[#362A0A] mb-10">
             Our Top Collection's

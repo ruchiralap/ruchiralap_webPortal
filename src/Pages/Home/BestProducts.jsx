@@ -7,7 +7,7 @@ const BestProducts = () => {
 
   return (
     <>
-      <section className=" mt-20">
+      <section className=" mt-20 w-11/12 mx-auto">
         <div className="mb-10">
           <h3 className=" text-3xl font-extrabold text-[#362A0A]">
             Best Sell Products

@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#201700] hover:cursor-pointer w-full mt-20">
+      {/* <div className="bg-[#201700] hover:cursor-pointer w-full mt-20">
         <h3 className=" text-xl font-medium text-center py-2 text-slate-100 hover:text-[#E1DAC5] ">
           Back to top
         </h3>
-      </div>
-      <hr />
-      <section className="bg-[#201700] p-10 grid grid-cols-1 md:grid-cols-7 gap-5">
+      </div> */}
+      <section className="bg-[#201700] p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
@@ -58,7 +57,9 @@ const Footer = () => {
               </h6>
               <fieldset className="form-control w-80">
                 <label className="label">
-                  <span className="label-text text-slate-400">Enter your email address</span>
+                  <span className="label-text text-slate-400">
+                    Enter your email address
+                  </span>
                 </label>
                 <div className="join">
                   <input
@@ -66,9 +67,7 @@ const Footer = () => {
                     placeholder="username@site.com"
                     className=" border border-slate-100 input join-item bg-transparent text-slate-50"
                   />
-                  <button className="btn border bg-[#FFFBE8]">
-                    Subscribe
-                  </button>
+                  <button className="btn border bg-[#FFFBE8]">Subscribe</button>
                 </div>
               </fieldset>
             </form>
