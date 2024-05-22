@@ -10,3 +10,11 @@
   background-clip: text;
   color: transparent;
 }
+
+/* Banner Icons Style */
+.footerIcons {
+  transition: 0.5s;
+}
+.footerIcons:hover {
+  transform: translateY(-20px);
+}
