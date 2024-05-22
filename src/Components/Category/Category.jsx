@@ -4,7 +4,7 @@ import useCategory from "../../Hooks/useCategory";
 
 const Category = () => {
   const [allCategory] = useCategory();
-  console.log(allCategory);
+  // console.log(allCategory);
 
   return (
     <>
@@ -18,7 +18,9 @@ const Category = () => {
           {allCategory &&
             allCategory?.map((category) => (
               <div key={category?._id} className="">
-                <Link to={`/productPage/${category?._id}`}>
+                <Link
+                  to={`/categoryWiseProducts/${category?._id}/${category?.category_name}`}
+                >
                   <div>
                     <div className="avatar border rounded-full border-[#201700]">
                       <div className="rounded-full">
