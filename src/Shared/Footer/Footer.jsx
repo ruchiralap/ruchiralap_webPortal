@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-gradient-to-r mt-20 from-slate-800 via-slate-500 to-slate-800 hover:cursor-pointer w-full">
+      <div className="bg-[] hover:cursor-pointer w-full">
         <h3 className=" text-xl font-medium text-center py-2 text-slate-100 ">
           Back to top
         </h3>
