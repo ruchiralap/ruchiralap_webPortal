@@ -30,7 +30,7 @@ const Category = () => {
                       </div>
                     </div>
                     <div className="">
-                      <p className=" text-xl font-medium text-[#443930] text-center py-4 hover:underline">
+                      <p className=" text-xl font-medium text-[#201700] text-center py-4 hover:underline">
                         {category?.category_name}
                       </p>
                     </div>

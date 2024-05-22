@@ -18,7 +18,7 @@ const BestProducts = () => {
             allProducts?.map((product) => (
               <div
                 key={product?._id}
-                className="bg-[#F0EBD8] rounded-3xl shadow-md"
+                className="bg-[#F0EBD8] rounded-3xl shadow-md hover:shadow-2xl"
               >
                 <div className=" bg-transparent rounded-3xl">
                   <Link to={`/productDetails/${product?._id}`}>
