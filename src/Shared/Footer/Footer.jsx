@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-green-300 via-red-200 to-green-300 hover:cursor-pointer w-full">
-        <h3 className=" text-xl font-medium text-center py-2 text-slate-600 ">
+      <div className="bg-gradient-to-r mt-20 from-slate-800 via-slate-500 to-slate-800 hover:cursor-pointer w-full">
+        <h3 className=" text-xl font-medium text-center py-2 text-slate-100 ">
           Back to top
         </h3>
       </div>
       <hr />
-      <section className="bg-gradient-to-r from-green-300 via-red-200 to-green-300 p-10 grid grid-cols-1 md:grid-cols-7 gap-5">
+      <section className="bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800 p-10 grid grid-cols-1 md:grid-cols-7 gap-5">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-4xl font-mono bg-flag mr-20">
-                Ruchir <span className=" text-red-500">Alap</span>
+              <h3 className=" md:text-4xl font-mono text-slate-50 mr-20">
+                Ruchir <span className=" text-slate-400">Alap</span>
               </h3>
             </Link>
-            <p className=" text-sm text-slate-600 mt-2">
+            <p className=" text-sm text-slate-400 mt-2">
               Welcome to Ruchir Alap, your go-to destination for online
               shopping! Discover the latest trends and timeless classics in
               fashion, electronics, home essentials, and more.
@@ -33,21 +33,29 @@ const Footer = () => {
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
           <div className=" menu space-y-1 font-medium">
-            <h6 className="footer-title">Services</h6>
+            <h6 className=" text-2xl text-slate-50 font-semibold">Services</h6>
             <Link to="/bestSell">
-              <a className="link link-hover hover:text-green-500">Best Sell</a>
+              <a className="link link-hover hover:text-green-500 text-slate-300">
+                Best Sell
+              </a>
             </Link>
             <Link to="/about">
-              <a className="link link-hover hover:text-green-500">About us</a>
+              <a className="link link-hover hover:text-green-500 text-slate-300">
+                About us
+              </a>
             </Link>
 
             <Link to="/contact">
-              <a className="link link-hover hover:text-green-500">Contact us</a>
+              <a className="link link-hover hover:text-green-500 text-slate-300">
+                Contact us
+              </a>
             </Link>
           </div>
           <div>
             <form>
-              <h6 className="footer-title">Newsletter</h6>
+              <h6 className="text-2xl text-slate-50 font-semibold">
+                Newsletter
+              </h6>
               <fieldset className="form-control w-80">
                 <label className="label">
                   <span className="label-text">Enter your email address</span>
@@ -56,9 +64,9 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="username@site.com"
-                    className=" border-none input focus:outline-none join-item"
+                    className=" border border-slate-700 input focus:outline-none join-item bg-transparent"
                   />
-                  <button className="btn bg-gradient-to-r from-green-700 via-red-600 to-green-700 join-item border-none text-slate-50">
+                  <button className="btn border hover:bg-gradient-to-r bg-transparent from-orange-500 via-yellow-200 to-orange-100 join-item border-slate-700 hover:text-slate-800">
                     Subscribe
                   </button>
                 </div>
@@ -68,7 +76,7 @@ const Footer = () => {
         </div>
       </section>
       <hr />
-      <footer className="footer footer-center p-4 bg-gradient-to-r from-green-300 via-red-200 to-green-300  text-base-content">
+      <footer className="footer footer-center p-4 bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800 text-slate-300">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>
