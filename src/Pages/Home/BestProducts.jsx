@@ -4,6 +4,7 @@ import { ShoppingBag } from "lucide-react";
 
 const BestProducts = () => {
   const [allProducts] = useAllProducts();
+  console.log(allProducts);
 
   return (
     <>
