@@ -4,7 +4,8 @@ import Error from "../Components/Error/Error";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
-import BestSell from "../Pages/BestSell/BestSell";
+import AllProducts from "../Pages/AllProducts/AllProducts";
+import ProductDetails from "../Pages/AllProducts/ProductDetails";
 
 const Router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/bestSell",
-        element: <BestSell />,
+        path: "/allProducts",
+        element: <AllProducts />,
+      },
+      {
+        path: "/productDetails/:id",
+        element: <ProductDetails />,
       },
       {
         path: "/about",
