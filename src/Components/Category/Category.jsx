@@ -10,7 +10,7 @@ const Category = () => {
     <>
       <div className=" w-11/12 mx-auto mt-44">
         <div>
-          <h2 className=" text-3xl font-extrabold text-[#362A0A] mb-10">
+          <h2 className=" text-3xl font-extrabold text-[#FEEBD6] mb-10">
             Our Top Collection's
           </h2>
         </div>
@@ -22,7 +22,7 @@ const Category = () => {
                   to={`/categoryWiseProducts/${category?._id}/${category?.category_name}`}
                 >
                   <div>
-                    <div className="avatar border rounded-full border-[#201700]">
+                    <div className="avatar border hover:border-none rounded-full border-[#FEEBD6]">
                       <div className="rounded-full">
                         <img
                           className=" w-full mx-auto"
@@ -31,8 +31,8 @@ const Category = () => {
                         />
                       </div>
                     </div>
-                    <div className="">
-                      <p className=" text-xl font-medium text-[#201700] text-center py-4 hover:underline">
+                    <div>
+                      <p className=" text-xl font-medium text-[#FEEBD6] text-center py-4 hover:link font-roboto">
                         {category?.category_name}
                       </p>
                     </div>

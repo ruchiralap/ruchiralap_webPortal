@@ -7,7 +7,16 @@ export default {
         lightCream: "#FFFBE8",
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        libre: ['"Libre Baskerville"', "serif"],
+      },
+      keyframes: {
+        zoomOut: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0.95)" },
+        },
+      },
+      animation: {
+        zoomOut: "zoomOut 0.5s ease-in-out forwards",
       },
     },
   },

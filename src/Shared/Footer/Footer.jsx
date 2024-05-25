@@ -9,15 +9,15 @@ const Footer = () => {
           Back to top
         </h3>
       </div> */}
-      <section className="bg-[#201700] p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <section className="bg-gradient-to-r from-[#11191B] via-yellow-900 to-[#200C11] font-roboto p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-4xl font-mono text-[#FCFCFC] mr-20">
+              <h3 className=" md:text-5xl font-bold font-roboto text-[#FEEBD6] mr-20">
                 Ruchir <span className=" text-[#FFFBE8]">Alap</span>
               </h3>
             </Link>
-            <p className=" text-sm text-slate-300 mt-2">
+            <p className=" text-sm font-robot text-slate-300 mt-2">
               Welcome to Ruchir Alap, your go-to destination for online
               shopping! Discover the latest trends and timeless classics in
               fashion, electronics, home essentials, and more.
@@ -34,18 +34,18 @@ const Footer = () => {
           <div className=" menu space-y-1 font-medium">
             <h6 className=" text-2xl text-[#FCFCFC] font-semibold">Services</h6>
             <Link to="/bestSell">
-              <a className="link link-hover hover:text-green-500 text-slate-300">
+              <a className="link link-hover hover:text-yellow-500 text-slate-300">
                 Best Sell
               </a>
             </Link>
             <Link to="/about">
-              <a className="link link-hover hover:text-green-500 text-slate-300">
+              <a className="link link-hover hover:text-yellow-500 text-slate-300">
                 About us
               </a>
             </Link>
 
             <Link to="/contact">
-              <a className="link link-hover hover:text-green-500 text-slate-300">
+              <a className="link link-hover hover:text-yellow-500 text-slate-300">
                 Contact us
               </a>
             </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </section>
       <hr />
-      <footer className="footer footer-center p-4 bg-[#201700] text-[#FCFCFC]">
+      <footer className="footer footer-center p-4 bg-gradient-to-r from-[#11191B] via-yellow-900 to-[#200C11] text-[#FCFCFC]">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>
