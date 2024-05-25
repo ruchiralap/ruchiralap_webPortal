@@ -9,7 +9,7 @@ const Footer = () => {
           Back to top
         </h3>
       </div> */}
-      <section className="bg-gradient-to-r from-[#11191B] via-yellow-900 to-[#200C11] font-roboto p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <section className="bg-gradient-to-r from-[#200C11] via-yellow-900 to-[#200C11] font-roboto p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
@@ -67,7 +67,7 @@ const Footer = () => {
                     placeholder="username@site.com"
                     className=" border border-slate-100 input join-item bg-transparent text-slate-50"
                   />
-                  <button className="btn border bg-[#FFFBE8]">Subscribe</button>
+                  <button className=" px-4 rounded-r-md font-medium border-none bg-[#F9C302]">Subscribe</button>
                 </div>
               </fieldset>
             </form>
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </section>
       <hr />
-      <footer className="footer footer-center p-4 bg-gradient-to-r from-[#11191B] via-yellow-900 to-[#200C11] text-[#FCFCFC]">
+      <footer className="footer footer-center p-4 bg-gradient-to-r from-[#200C11] via-yellow-900 to-[#200C11] text-[#FCFCFC]">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>
