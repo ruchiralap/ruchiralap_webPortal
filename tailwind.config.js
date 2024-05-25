@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightCream: '#FFFBE8',
+        lightCream: "#FFFBE8",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },
