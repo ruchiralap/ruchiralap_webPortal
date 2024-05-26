@@ -74,5 +74,28 @@
 
 /* Search section */
 .input-border {
-  border: 2px solid #feebd6;
+  border: 1px solid #feebd6;
+}
+.input-text {
+  color: #d1d5db;
+}
+
+/* Footer Section */
+.footer-bg {
+  background: linear-gradient(to right, #200c11, #a16207, #200c11);
+}
+.copy-right-text {
+  color: #fcfcfc;
+}
+
+.nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #eab308;
+  text-decoration: underline;
+}
+.description {
+  color: #d1d5db;
 }

@@ -4,20 +4,15 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      {/* <div className="bg-[#201700] hover:cursor-pointer w-full mt-20">
-        <h3 className=" text-xl font-medium text-center py-2 text-slate-100 hover:text-[#E1DAC5] ">
-          Back to top
-        </h3>
-      </div> */}
-      <section className="bg-gradient-to-r from-[#200C11] via-yellow-900 to-[#200C11] font-roboto p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <section className="footer-bg p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-5xl font-bold font-roboto text-[#FEEBD6] mr-20">
-                Ruchir <span className=" text-[#FFFBE8]">Alap</span>
+              <h3 className=" md:text-5xl font-bold section-title-color mr-20">
+                Ruchir <span>Alap</span>
               </h3>
             </Link>
-            <p className=" text-sm font-robot text-slate-300 mt-2">
+            <p className="description text-sm font-robot mt-2">
               Welcome to Ruchir Alap, your go-to destination for online
               shopping! Discover the latest trends and timeless classics in
               fashion, electronics, home essentials, and more.
@@ -32,32 +27,28 @@ const Footer = () => {
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
           <div className=" menu space-y-1 font-medium">
-            <h6 className=" text-2xl text-[#FCFCFC] font-semibold">Services</h6>
+            <h6 className=" text-2xl copy-right-text font-semibold">
+              Services
+            </h6>
             <Link to="/bestSell">
-              <a className="link link-hover hover:text-yellow-500 text-slate-300">
-                Best Sell
-              </a>
+              <a className="nav-link">Best Sell</a>
             </Link>
             <Link to="/about">
-              <a className="link link-hover hover:text-yellow-500 text-slate-300">
-                About us
-              </a>
+              <a className="nav-link">About us</a>
             </Link>
 
             <Link to="/contact">
-              <a className="link link-hover hover:text-yellow-500 text-slate-300">
-                Contact us
-              </a>
+              <a className="nav-link">Contact us</a>
             </Link>
           </div>
           <div>
             <form>
-              <h6 className="text-2xl text-[#FCFCFC] font-semibold">
+              <h6 className="text-2xl copy-right-text font-semibold">
                 Newsletter
               </h6>
               <fieldset className="form-control w-80">
                 <label className="label">
-                  <span className="label-text text-slate-300">
+                  <span className="label-text description">
                     Enter your email address
                   </span>
                 </label>
@@ -65,9 +56,11 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="username@site.com"
-                    className=" border border-slate-100 input join-item bg-transparent text-slate-50"
+                    className=" border input-border input join-item bg-transparent input-text"
                   />
-                  <button className=" px-4 rounded-r-md font-medium border-none bg-[#F9C302]">Subscribe</button>
+                  <button className=" px-4 rounded-r-md font-medium border-none dynamic-btn">
+                    Subscribe
+                  </button>
                 </div>
               </fieldset>
             </form>
@@ -75,7 +68,7 @@ const Footer = () => {
         </div>
       </section>
       <hr />
-      <footer className="footer footer-center p-4 bg-gradient-to-r from-[#200C11] via-yellow-900 to-[#200C11] text-[#FCFCFC]">
+      <footer className="footer footer-center p-4 footer-bg copy-right-text">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>
