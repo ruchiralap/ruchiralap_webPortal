@@ -23,7 +23,7 @@ const ProductsCard = ({ product }) => {
               </Link>
             </div>
             <div className=" flex items-center justify-between p-5">
-              <div className="product-or-price-name">
+              <div className="text-color">
                 <Link to={`/productDetails/${product?._id}`}>
                   <h4 className=" text-xl font-semibold">
                     {product?.product_name}

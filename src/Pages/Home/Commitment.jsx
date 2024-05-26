@@ -9,7 +9,7 @@ const Commitment = () => {
         <div className=" flex items-center justify-center">
           <img src={honey} alt="" />
         </div>
-        <div className="product-or-price-name text-center md:w-6/12 mx-auto space-y-3">
+        <div className="text-color text-center md:w-6/12 mx-auto space-y-3">
           <h1 className="text-2xl md:text-4xl font-extrabold">
             OUR COMMITMENT TO YOUR 100% SATISFACTION
           </h1>

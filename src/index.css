@@ -22,16 +22,16 @@
   transform: translateY(-20px);
 }
 
-/*///////////////////////////////////// THEME - 3 /////////////////////////////////////*/
+/*///////////////////////////////////// THEME - 2 /////////////////////////////////////*/
 .theme-bg-or-font-style {
   background-color: #1b130c;
   font-family: font-libre;
 }
-.section-title-color {
+.text-color {
   color: #feebd6;
 }
-.product-or-price-name {
-  color: #feebd6;
+.description {
+  color: #d1d5db;
 }
 .dynamic-btn {
   background-color: #f9c302;
@@ -46,7 +46,6 @@
   background: transparent;
 }
 
-/* Header Section */
 .header {
   color: black;
   background: linear-gradient(to right, #11191b, #a16207, #200c11);
@@ -72,7 +71,6 @@
   color: #feebd6;
 }
 
-/* Search section */
 .input-border {
   border: 1px solid #feebd6;
 }
@@ -80,11 +78,10 @@
   color: #d1d5db;
 }
 
-/* Footer Section */
 .footer-bg {
   background: linear-gradient(to right, #200c11, #a16207, #200c11);
 }
-.copy-right-text {
+.header-title {
   color: #fcfcfc;
 }
 
@@ -95,7 +92,4 @@
 .nav-link:hover {
   color: #eab308;
   text-decoration: underline;
-}
-.description {
-  color: #d1d5db;
 }

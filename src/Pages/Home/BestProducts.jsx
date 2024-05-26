@@ -10,7 +10,7 @@ const BestProducts = () => {
     <>
       <section className=" mt-20 w-11/12 mx-auto">
         <div className="mb-10">
-          <h3 className="section-title-color text-3xl font-extrabold">
+          <h3 className="text-color text-3xl font-extrabold">
             Best Sell Products
           </h3>
         </div>
@@ -31,7 +31,7 @@ const BestProducts = () => {
                   </Link>
                 </div>
                 <div className=" flex items-center justify-between p-5">
-                  <div className="product-or-price-name">
+                  <div className="text-color">
                     <Link to={`/productDetails/${product?._id}`}>
                       <h4 className=" text-xl font-semibold">
                         {product?.product_name}

@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <section className="footer-bg p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <hr className="mt-20" />
+      <section className="footer-bg p-10 grid grid-cols-1 md:grid-cols-7 gap-5">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-5xl font-bold section-title-color mr-20">
+              <h3 className=" md:text-5xl font-bold text-color mr-20">
                 Ruchir <span>Alap</span>
               </h3>
             </Link>
@@ -27,9 +28,7 @@ const Footer = () => {
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
           <div className=" menu space-y-1 font-medium">
-            <h6 className=" text-2xl copy-right-text font-semibold">
-              Services
-            </h6>
+            <h6 className=" text-2xl header-title font-semibold">Services</h6>
             <Link to="/bestSell">
               <a className="nav-link">Best Sell</a>
             </Link>
@@ -43,7 +42,7 @@ const Footer = () => {
           </div>
           <div>
             <form>
-              <h6 className="text-2xl copy-right-text font-semibold">
+              <h6 className="text-2xl header-title font-semibold">
                 Newsletter
               </h6>
               <fieldset className="form-control w-80">
@@ -68,7 +67,7 @@ const Footer = () => {
         </div>
       </section>
       <hr />
-      <footer className="footer footer-center p-4 footer-bg copy-right-text">
+      <footer className="footer footer-center p-4 footer-bg description">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>
