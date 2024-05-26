@@ -21,3 +21,32 @@
 .footerIcons:hover {
   transform: translateY(-20px);
 }
+
+/* Theme3 */
+.theme-or-font {
+  background-color: #1b130c;
+  font-family: font-libre;
+}
+
+.section-title-color {
+  color: #feebd6;
+}
+
+.product-or-price-name {
+  color: #feebd6;
+}
+
+.dynamic-btn {
+  background-color: #f9c302;
+  color: #201700;
+}
+
+.border-color {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: #feebd6;
+}
+
+.product-card {
+  background: transparent;
+}

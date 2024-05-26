@@ -5,15 +5,15 @@ import honey from "../../assets/honneyCommitment.png";
 const Commitment = () => {
   return (
     <>
-      <section className=" font-libre">
+      <section>
         <div className=" flex items-center justify-center">
           <img src={honey} alt="" />
         </div>
-        <div className=" text-center md:w-6/12 mx-auto space-y-3">
-          <h1 className="text-[#FEEBD6] text-2xl md:text-4xl font-extrabold">
+        <div className="product-or-price-name text-center md:w-6/12 mx-auto space-y-3">
+          <h1 className="text-2xl md:text-4xl font-extrabold">
             OUR COMMITMENT TO YOUR 100% SATISFACTION
           </h1>
-          <p className="text-[#FEEBD6] text-sm">
+          <p className="text-sm">
             We're confident you'll fall head over honey for our infused nuts,
             but if, against all odds, you don't, just let us know! 100%
             satisfaction guaranteed
@@ -21,7 +21,7 @@ const Commitment = () => {
         </div>
         <div className="mt-10 flex items-center justify-center">
           <Link to="/allProducts">
-            <button className=" border-none rounded-full px-12 py-4 text-[#201700] bg-[#F9C302] hover:bg-[#f4d461] font-extrabold">
+            <button className=" border-none rounded-full px-12 py-4 dynamic-btn font-extrabold">
               Shop Now
             </button>
           </Link>
