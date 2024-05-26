@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <hr className="mt-20" />
-      <section className="footer-bg p-10 grid grid-cols-1 md:grid-cols-7 gap-5">
+      <section className="footer-bg p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
