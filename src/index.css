@@ -22,31 +22,57 @@
   transform: translateY(-20px);
 }
 
-/* Theme3 */
-.theme-or-font {
+/*///////////////////////////////////// THEME - 3 /////////////////////////////////////*/
+.theme-bg-or-font-style {
   background-color: #1b130c;
   font-family: font-libre;
 }
-
 .section-title-color {
   color: #feebd6;
 }
-
 .product-or-price-name {
   color: #feebd6;
 }
-
 .dynamic-btn {
   background-color: #f9c302;
   color: #201700;
 }
-
 .border-color {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: #feebd6;
 }
-
 .product-card {
   background: transparent;
+}
+
+/* Header Section */
+.header {
+  color: black;
+  background: linear-gradient(to right, #11191b, #a16207, #200c11);
+}
+.menu-btn {
+  color: #9ca3af;
+}
+.menu-btn:hover {
+  color: white;
+  background-color: #374151;
+}
+.menu-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px white;
+}
+.nav-active-color {
+  color: #f42a41;
+}
+.nav-pending-color {
+  color: #feebd6;
+}
+.cart-icon-color {
+  color: #feebd6;
+}
+
+/* Search section */
+.input-border {
+  border: 2px solid #feebd6;
 }

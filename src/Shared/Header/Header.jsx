@@ -7,7 +7,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="text-black font-roboto bg-gradient-to-r from-[#11191B] via-yellow-900 to-[#200C11]">
+    <nav className="header">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -15,7 +15,7 @@ function Header() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-all duration-300 ease-in-out"
+              className="menu-btn inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-inset transition-all duration-300 ease-in-out"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -30,10 +30,10 @@ function Header() {
                   to="/"
                   className={({ isActive, isPending }) =>
                     isPending
-                      ? "text-red-300"
+                      ? "nav-pending-color"
                       : isActive
-                      ? "text-[#FEEBD6] font-bold"
-                      : "text-[#FEEBD6]"
+                      ? "nav-active-color font-bold"
+                      : "nav-pending-color"
                   }
                 >
                   Home
@@ -42,10 +42,10 @@ function Header() {
                   to="/allProducts"
                   className={({ isActive, isPending }) =>
                     isPending
-                      ? "text-red-300"
+                      ? "nav-pending-color"
                       : isActive
-                      ? "text-[#FEEBD6] font-bold"
-                      : "text-[#FEEBD6]"
+                      ? "nav-active-color font-bold"
+                      : "nav-pending-color"
                   }
                 >
                   All Products
@@ -54,10 +54,10 @@ function Header() {
                   to="/about"
                   className={({ isActive, isPending }) =>
                     isPending
-                      ? "text-red-300"
+                      ? "nav-pending-color"
                       : isActive
-                      ? "text-[#FEEBD6] font-bold"
-                      : "text-[#FEEBD6]"
+                      ? "nav-active-color font-bold"
+                      : "nav-pending-color"
                   }
                 >
                   About
@@ -66,10 +66,10 @@ function Header() {
                   to="/contact"
                   className={({ isActive, isPending }) =>
                     isPending
-                      ? "text-red-300"
+                      ? "nav-pending-color"
                       : isActive
-                      ? "text-[#FEEBD6] font-bold"
-                      : "text-[#FEEBD6]"
+                      ? "nav-active-color font-bold"
+                      : "nav-pending-color"
                   }
                 >
                   Contact
@@ -89,9 +89,9 @@ function Header() {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <IsSearch />
 
-            <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
+            <button className="md:ml-4 p-1 border-none outline-none">
               <span className="sr-only">View Cart</span>
-              <ShoppingCart className="text-[#FEEBD6]" />
+              <ShoppingCart className="cart-icon-color" />
             </button>
           </div>
         </div>
@@ -111,10 +111,10 @@ function Header() {
               to="/allProducts"
               className={({ isActive, isPending }) =>
                 isPending
-                  ? "text-red-300"
+                  ? "nav-pending-color"
                   : isActive
-                  ? "text-[#FEEBD6] font-bold"
-                  : "text-[#FEEBD6]"
+                  ? "nav-active-color font-bold"
+                  : "nav-pending-color"
               }
             >
               All Products
@@ -127,10 +127,10 @@ function Header() {
               to="/"
               className={({ isActive, isPending }) =>
                 isPending
-                  ? "text-red-300"
+                  ? "nav-pending-color"
                   : isActive
-                  ? "text-[#FEEBD6] font-bold"
-                  : "text-[#FEEBD6]"
+                  ? "nav-active-color font-bold"
+                  : "nav-pending-color"
               }
             >
               Home
@@ -144,10 +144,10 @@ function Header() {
               to="/about"
               className={({ isActive, isPending }) =>
                 isPending
-                  ? "text-red-300"
+                  ? "nav-pending-color"
                   : isActive
-                  ? "text-[#FEEBD6] font-bold"
-                  : "text-[#FEEBD6]"
+                  ? "nav-active-color font-bold"
+                  : "nav-pending-color"
               }
             >
               About
@@ -160,10 +160,10 @@ function Header() {
               to="/contact"
               className={({ isActive, isPending }) =>
                 isPending
-                  ? "text-red-300"
+                  ? "nav-pending-color"
                   : isActive
-                  ? "text-[#FEEBD6] font-bold"
-                  : "text-[#FEEBD6]"
+                  ? "nav-active-color font-bold"
+                  : "nav-pending-color"
               }
             >
               Contact
