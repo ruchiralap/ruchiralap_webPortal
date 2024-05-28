@@ -8,11 +8,11 @@ const Footer = () => {
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-5xl font-bold text-color mr-20">
+              <h3 className=" md:text-5xl font-bold header-title mr-20">
                 Ruchir <span>Alap</span>
               </h3>
             </Link>
-            <p className="description text-sm font-robot mt-2">
+            <p className="footer-description text-sm font-robot mt-2">
               Welcome to Ruchir Alap, your go-to destination for online
               shopping! Discover the latest trends and timeless classics in
               fashion, electronics, home essentials, and more.
@@ -46,7 +46,7 @@ const Footer = () => {
               </h6>
               <fieldset className="form-control w-80">
                 <label className="label">
-                  <span className="label-text description">
+                  <span className="label-text footer-description">
                     Enter your email address
                   </span>
                 </label>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </section>
       <hr />
-      <footer className="footer footer-center p-4 footer-bg description">
+      <footer className="footer footer-center p-4 footer-bg footer-description">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>

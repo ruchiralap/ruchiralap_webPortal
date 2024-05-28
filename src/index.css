@@ -23,7 +23,7 @@
 }
 
 /*///////////////////////////////////// THEME - 2 /////////////////////////////////////*/
-.theme-bg-or-font-style {
+/* .theme-bg-or-font-style {
   background-color: #1b130c;
   font-family: font-libre;
 }
@@ -92,4 +92,375 @@
 .nav-link:hover {
   color: #eab308;
   text-decoration: underline;
+} */
+
+/*///////////////////////////////////// THEME - 3 /////////////////////////////////////*/
+/* .theme-bg-or-font-style {
+  background-color: #282c34;
+  font-family: font-libre;
 }
+.text-color {
+  color: #f5f5f5;
+}
+.description {
+  color: #c5c6c7;
+}
+.dynamic-btn {
+  background-color: #61dafb;
+  color: #282c34;
+}
+.border-color {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: #61dafb;
+}
+.product-card {
+  background: transparent;
+}
+
+.header {
+  color: black;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+.menu-btn {
+  color: #a8a9ad;
+}
+.menu-btn:hover {
+  color: white;
+  background-color: #495057;
+}
+.menu-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px white;
+}
+.nav-active-color {
+  color: #ff6f61;
+}
+.nav-pending-color {
+  color: #f5f5f5;
+}
+.cart-icon-color {
+  color: #f5f5f5;
+}
+
+.input-border {
+  border: 1px solid #61dafb;
+}
+.input-text {
+  color: #c5c6c7;
+}
+
+.footer-bg {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+.header-title {
+  color: #f5f5f5;
+}
+
+.nav-link {
+  color: #c5c6c7;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #61dafb;
+  text-decoration: underline;
+} */
+
+/*///////////////////////////////////// THEME - 4 /////////////////////////////////////*/
+/* .theme-bg-or-font-style {
+  background-color: #f5f5dc;
+  font-family: font-libre;
+}
+.text-color {
+  color: #2e3d30;
+}
+.description {
+  color: #8b9a46;
+}
+.dynamic-btn {
+  background-color: #d4a373;
+  color: #2e3d30;
+}
+.border-color {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: #d4a373;
+}
+.product-card {
+  background: transparent;
+}
+
+.header {
+  color: black;
+  background: linear-gradient(to right, #556b2f, #8fbc8f, #d4a373);
+}
+.menu-btn {
+  color: #8b9a46;
+}
+.menu-btn:hover {
+  color: white;
+  background-color: #556b2f;
+}
+.menu-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px white;
+}
+.nav-active-color {
+  color: #e49b0f;
+}
+.nav-pending-color {
+  color: #2e3d30;
+}
+.cart-icon-color {
+  color: #2e3d30;
+}
+
+.input-border {
+  border: 1px solid #d4a373;
+}
+.input-text {
+  color: #8b9a46;
+}
+
+.footer-bg {
+  background: linear-gradient(to right, #556b2f, #8fbc8f, #d4a373);
+}
+.header-title {
+  color: #f5f5f5;
+}
+
+.nav-link {
+  color: #8b9a46;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #d4a373;
+  text-decoration: underline;
+} */
+
+/*///////////////////////////////////// THEME - 5 /////////////////////////////////////*/
+.theme-bg-or-font-style {
+  background-color: #ffffff;
+  font-family: font-libre;
+}
+.text-color {
+  color: #333333;
+}
+.description {
+  color: #6c757d;
+}
+.dynamic-btn {
+  background-color: #ff9800;
+  color: #ffffff;
+}
+.border-color {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: #ff9800;
+}
+.product-card {
+  background: transparent;
+}
+
+.header {
+  color: black;
+  background: linear-gradient(to right, #ff5722, #ff9800, #ffc107);
+}
+.menu-btn {
+  color: #607d8b;
+}
+.menu-btn:hover {
+  color: white;
+  background-color: #ff9800;
+}
+.menu-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px white;
+}
+.nav-active-color {
+  color: #ff5722;
+}
+.nav-pending-color {
+  color: #333333;
+}
+.cart-icon-color {
+  color: #ff9800;
+}
+
+.input-border {
+  border: 1px solid #ff9800;
+}
+.input-text {
+  color: #6c757d;
+}
+
+.footer-bg {
+  background: linear-gradient(to right, #ff9800, #ffb74d, #ffcc80);
+}
+.footer-description {
+  color: #333333;
+}
+.header-title {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #dee4e9;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* ///////////////////////////////////// THEME - 6 ///////////////////////////////////// */
+/* .theme-bg-or-font-style {
+  background-color: #f4f4f9;
+  font-family: font-libre;
+}
+.text-color {
+  color: #2b2b2b;
+}
+.description {
+  color: #4a4a4a;
+}
+.dynamic-btn {
+  background-color: #82b440;
+  color: #ffffff;
+}
+.border-color {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: #82b440;
+}
+.product-card {
+  background: transparent;
+}
+
+.header {
+  color: black;
+  background: linear-gradient(to right, #388e3c, #66bb6a, #a5d6a7);
+}
+.menu-btn {
+  color: #2b2b2b;
+}
+.menu-btn:hover {
+  color: white;
+  background-color: #82b440;
+}
+.menu-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px white;
+}
+.nav-active-color {
+  color: #ff7043;
+}
+.nav-pending-color {
+  color: #2b2b2b;
+}
+.cart-icon-color {
+  color: #82b440;
+}
+
+.input-border {
+  border: 1px solid #82b440;
+}
+.input-text {
+  color: #4a4a4a;
+}
+
+.footer-bg {
+  background: linear-gradient(to right, #388e3c, #66bb6a, #a5d6a7);
+}
+.footer-description {
+  color: #ffffff;
+}
+.header-title {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #82b440;
+  text-decoration: underline;
+} */
+
+/*///////////////////////////////////// THEME - 7 /////////////////////////////////////*/
+/* .theme-bg-or-font-style {
+  background-color: #f0f8f7;
+  font-family: font-libre;
+}
+.text-color {
+  color: #2e3d49;
+}
+.description {
+  color: #52646d;
+}
+.dynamic-btn {
+  background-color: #ffa726;
+  color: #ffffff;
+}
+.border-color {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: #ffa726;
+}
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.header {
+  color: #ffffff;
+  background: linear-gradient(to right, #81c784, #aed581, #dce775);
+}
+.menu-btn {
+  color: #52646d;
+}
+.menu-btn:hover {
+  color: white;
+  background-color: #ffa726;
+}
+.menu-btn:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px white;
+}
+.nav-active-color {
+  color: #ef5350;
+}
+.nav-pending-color {
+  color: #2e3d49;
+}
+.cart-icon-color {
+  color: #ffa726;
+}
+
+.input-border {
+  border: 1px solid #ffa726;
+}
+.input-text {
+  color: #52646d;
+}
+
+.footer-bg {
+  background: linear-gradient(to right, #81c784, #aed581, #dce775);
+}
+.footer-description {
+  color: #2e3d49;
+}
+.header-title {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #52646d;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #ffa726;
+  text-decoration: underline;
+} */

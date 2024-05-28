@@ -19,9 +19,9 @@ const BestProducts = () => {
             allProducts?.map((product) => (
               <div
                 key={product?._id}
-                className=" bg-transparent hover:rounded-none border border-color rounded-3xl shadow-md hover:shadow-2xl"
+                className="product-card hover:rounded-none border border-color rounded-3xl shadow-md hover:shadow-2xl"
               >
-                <div className="product-card rounded-3xl">
+                <div className=" rounded-3xl">
                   <Link to={`/productDetails/${product?._id}`}>
                     <img
                       className="hover:animate-zoomOut w-full mx-auto rounded-3xl"
