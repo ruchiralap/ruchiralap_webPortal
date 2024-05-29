@@ -33,7 +33,7 @@ const Commitment = () => {
       <div className="mt-10 flex items-center justify-center">
         <Link to="/allProducts">
           <motion.button
-            className="border border-[#F9C302] rounded-full px-12 py-4 text-[#F9C302] hover:text-[#201700] hover:bg-[#F9C302] font-extrabold"
+            className="rounded-full px-12 py-4 text-[#201700] bg-[#F9C302] font-extrabold"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 50 }}
