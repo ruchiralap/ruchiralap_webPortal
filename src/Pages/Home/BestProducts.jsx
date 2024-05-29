@@ -36,7 +36,7 @@ const BestProducts = () => {
                 }
               >
                 <motion.div
-                  className="-ml-4 bg-transparent rounded-3xl absolute -mt-[12rem] flex items-center justify-center"
+                  className="-ml-4 bg-transparent rounded-3xl absolute -mt-[9rem] flex items-center justify-center"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -50,7 +50,7 @@ const BestProducts = () => {
                     />
                   </Link>
                 </motion.div>
-                <div className="flex items-center justify-between pt-[11rem] pb-5 px-5 bg-[#F0EBD8] rounded-3xl shadow-md hover:shadow-2xl transition-shadow duration-300">
+                <div className="flex items-center justify-between pt-[12rem] pb-5 px-5 bg-[#F0EBD8] rounded-3xl shadow-md hover:shadow-2xl transition-shadow duration-300">
                   <div className="text-[#443930]">
                     <Link to={`/productDetails/${product?._id}`}>
                       <h4 className="text-xl font-semibold">
