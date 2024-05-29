@@ -7,7 +7,7 @@ export default {
         lightCream: "#FFFBE8",
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        libre: ['"Libre Baskerville"', "serif"],
       },
     },
   },

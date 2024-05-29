@@ -3,6 +3,7 @@ import BestProducts from "./BestProducts";
 import Commitment from "./Commitment";
 
 import Banner from "./Banner/Banner";
+import Process from "./Process";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Banner />
       <BestProducts />
       <Category />
+      <Process />
       <Commitment />
     </>
   );
