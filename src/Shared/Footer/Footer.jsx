@@ -17,7 +17,7 @@ const Footer = () => {
                 Ruchir <span className=" text-[#FFFBE8]">Alap</span>
               </h3>
             </Link>
-            <p className=" text-sm text-slate-400 mt-2">
+            <p className=" text-sm text-slate-300 mt-2">
               Welcome to Ruchir Alap, your go-to destination for online
               shopping! Discover the latest trends and timeless classics in
               fashion, electronics, home essentials, and more.
@@ -57,7 +57,7 @@ const Footer = () => {
               </h6>
               <fieldset className="form-control w-80">
                 <label className="label">
-                  <span className="label-text text-slate-400">
+                  <span className="label-text text-slate-300">
                     Enter your email address
                   </span>
                 </label>

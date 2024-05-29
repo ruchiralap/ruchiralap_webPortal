@@ -10,10 +10,10 @@ const Commitment = () => {
           <img src={honey} alt="" />
         </div>
         <div className=" text-center md:w-6/12 mx-auto space-y-3">
-          <h1 className="text-[#342B0B] text-2xl md:text-4xl font-extrabold">
+          <h1 className="text-[#342B0B] text-2xl md:text-4xl font-extrabold font-roboto">
             OUR COMMITMENT TO YOUR 100% SATISFACTION
           </h1>
-          <p className="text-[#342B0B] text-sm font-thin">
+          <p className="text-[#0c0c0c] text-sm font-roboto">
             We're confident you'll fall head over honey for our infused nuts,
             but if, against all odds, you don't, just let us know! 100%
             satisfaction guaranteed

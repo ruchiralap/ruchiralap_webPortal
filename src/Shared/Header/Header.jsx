@@ -7,7 +7,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#FFFBE8] text-black">
+    <nav className="bg-[#FFFBE8] text-black font-roboto">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -91,7 +91,7 @@ function Header() {
 
             <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
               <span className="sr-only">View Cart</span>
-              <ShoppingCart />
+              <ShoppingCart className="text-[#201700]" />
             </button>
           </div>
         </div>

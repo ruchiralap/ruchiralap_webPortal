@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useAllProducts from "../../Hooks/useAllProducts";
-import { ShoppingBag } from "lucide-react";
+import { MdAddShoppingCart } from "react-icons/md";
 
 const BestProducts = () => {
   const [allProducts] = useAllProducts();
@@ -37,14 +37,14 @@ const BestProducts = () => {
                         {product?.product_name}
                       </h4>
                     </Link>
-                    <p className=" text-[#443930] font-medium mt-1">
-                      <span>Tk</span>
+                    <p className=" text-[#15120f] font-medium mt-1">
+                      <span>Tk </span>
                       {product?.price}
                     </p>
                   </div>
                   <div className="">
-                    <button className="p-3 text-sm rounded-full bg-[#E1DAC5] hover:bg-[#493A00] hover:text-[#D7D0CC]">
-                      <ShoppingBag />
+                    <button className="p-3 rounded-full bg-[#E1DAC5] hover:bg-[#493A00] hover:text-[#D7D0CC]">
+                      <MdAddShoppingCart className=" text-2xl" />
                     </button>
                   </div>
                 </div>
