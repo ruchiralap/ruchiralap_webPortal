@@ -89,7 +89,7 @@ const Process = () => {
                 </motion.div>
               </div>
               <motion.p
-                className="mt-2 text-sm font-medium text-center"
+                className="mt-2 font-medium text-center"
                 variants={textVariants}
               >
                 {item.text}

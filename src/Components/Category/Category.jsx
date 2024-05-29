@@ -10,7 +10,7 @@ const Category = () => {
     <>
       <div className="w-11/12 mx-auto mt-44">
         <div>
-          <h2 className="text-3xl font-extrabold text-[#362A0A] mb-10">
+          <h2 className="text-5xl font-extrabold text-[#362A0A] mb-14">
             Our Top Collection's
           </h2>
         </div>
