@@ -1,5 +1,4 @@
 import useAllProducts from "../../Hooks/useAllProducts";
-import Products from "./Products/Products";
 import Sidebar from "./Sidebar/Sidebar";
 
 const AllProducts = () => {
@@ -7,9 +6,8 @@ const AllProducts = () => {
 
   return (
     <>
-      <div>
-        <Products products={allProducts} />
-        <Sidebar />
+      <div className=" mt-10">
+        <Sidebar products={allProducts} />
       </div>
     </>
   );

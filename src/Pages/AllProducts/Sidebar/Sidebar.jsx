@@ -3,8 +3,10 @@ import { IoReorderThree } from "react-icons/io5";
 import Categories from "./Categories/Categories";
 import Price from "./Price/Price";
 import Size from "./Size/Size";
+import Colors from "./Colors/Colors";
+import Products from "../Products/Products";
 
-const Sidebar = ({ handleChange }) => {
+const Sidebar = ({ handleChange, products }) => {
   return (
     <>
       <div className="drawer lg:drawer-open">
@@ -15,7 +17,7 @@ const Sidebar = ({ handleChange }) => {
             <IoReorderThree />
           </label>
           <section>
-            <p>Content</p>
+            <Products products={products} />
           </section>
         </div>
         <div className="drawer-side border-r-2">
@@ -28,6 +30,7 @@ const Sidebar = ({ handleChange }) => {
             {/* Sidebar content here */}
             <Categories handleChange={handleChange} />
             <Price handleChange={handleChange} />
+            <Colors handleChange={handleChange} />
             <Size handleChange={handleChange} />
           </section>
         </div>
