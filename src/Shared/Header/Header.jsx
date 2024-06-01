@@ -2,12 +2,19 @@ import { AlignLeft, ChevronRight, ShoppingCart, X ,Phone} from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import IsSearch from "./IsSearch";
-
+import Marquee from "react-fast-marquee";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#ece7d4a8] bg-gradient-to-r from-[#ece7d4a8] via-[#fff0b3]
+
+    <div>
+      <div className="h-10 text-xl bg-black font-bold text-[#fff0b3] justify-center flex items-center">
+      <Marquee><p >Welcome to Ruchir Alap</p></Marquee>
+
+
+      </div>
+  <nav className="bg-[#ece7d4a8] bg-gradient-to-r from-[#ece7d4a8] via-[#fff0b3]
      to-[#ece7d4a8] text-black font-roboto">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between text-xl  h-40">
@@ -193,6 +200,8 @@ function Header() {
         </div>
       </div>
     </nav>
+    </div>
+  
   );
 }
 
