@@ -5,7 +5,7 @@ const Price = ({ handleChange }) => {
   return (
     <>
       <div className=" mt-10">
-        <h2 className=" text-2xl font-semibold text-[#201700]">Price</h2>
+        <h2 className=" text-2xl font-semibold text-[#201700]">Price Range</h2>
         <div className=" mt-8 grid space-y-2">
           <Input
             handleChange={handleChange}

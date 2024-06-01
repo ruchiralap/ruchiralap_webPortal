@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShoppingBag } from "lucide-react";
+import { MdAddShoppingCart } from "react-icons/md";
 
 /* eslint-disable react/prop-types */
 const ProductsCard = ({ product }) => {
@@ -29,7 +29,7 @@ const ProductsCard = ({ product }) => {
           </div>
           <div className="">
             <button className="p-2 text-sm rounded-full bg-[#E1DAC5] hover:bg-[#493A00] hover:text-[#D7D0CC]">
-              <ShoppingBag className=" text-sm" />
+              <MdAddShoppingCart className=" text-xl" />
             </button>
           </div>
         </div>
