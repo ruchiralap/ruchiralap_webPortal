@@ -6,7 +6,7 @@ import Size from "./Size/Size";
 import Colors from "./Colors/Colors";
 import Products from "../Products/Products";
 
-const Sidebar = ({ handleChange, products }) => {
+const Sidebar = ({ handleCategory, isProducts, handlePrice }) => {
   return (
     <>
       <div className="drawer lg:drawer-open">
@@ -17,7 +17,7 @@ const Sidebar = ({ handleChange, products }) => {
             <IoReorderThree />
           </label>
           <section>
-            <Products products={products} />
+            <Products products={isProducts} />
           </section>
         </div>
         <div className="drawer-side border-r-2">
@@ -28,10 +28,10 @@ const Sidebar = ({ handleChange, products }) => {
           ></label>
           <section className="menu p-10 w-80 min-h-full bg-base-200 md:bg-inherit text-base-content">
             {/* Sidebar content here */}
-            <Categories handleChange={handleChange} />
-            <Price handleChange={handleChange} />
-            <Colors handleChange={handleChange} />
-            <Size handleChange={handleChange} />
+            <Categories handleCategory={handleCategory} />
+            <Price handlePrice={handlePrice}  />
+            <Colors  />
+            <Size  />
           </section>
         </div>
       </div>
