@@ -15,25 +15,25 @@ const Price = ({ handleChange }) => {
             handleChange={handleChange}
             value={450}
             title="100 tk - 500 tk"
-            name="tast2"
+            name="test2"
           />
           <Input
             handleChange={handleChange}
             value={1000}
             title="500 tk - 1000 tk"
-            name="tast2"
+            name="test2"
           />
           <Input
             handleChange={handleChange}
             value={1500}
             title="700 tk - 1500 tk"
-            name="tast2"
+            name="test2"
           />
           <Input
             handleChange={handleChange}
             value={2000}
             title="1500 tk - 2000 tk"
-            name="tast2"
+            name="test2"
           />
         </div>
       </div>

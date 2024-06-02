@@ -29,7 +29,7 @@ const Sidebar = ({ result, handleChange }) => {
             {/* Sidebar content here */}
             <Categories handleChange={handleChange} />
             <Price handleChange={handleChange} />
-            <Size />
+            <Size handleChange={handleChange} />
           </section>
         </div>
       </div>
