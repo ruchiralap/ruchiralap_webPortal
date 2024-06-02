@@ -1,10 +1,15 @@
 import { Search } from "lucide-react";
+import { useContext } from "react";
+import { FilterContext } from "../../Context/FilterProvider";
 
 const IsSearch = () => {
+  const { handleInputChange } = useContext(FilterContext);
+
   return (
     <>
       <div className="relative text-slate-900">
         <input
+          onChange={handleInputChange}
           type="search"
           name="search"
           placeholder="Search"

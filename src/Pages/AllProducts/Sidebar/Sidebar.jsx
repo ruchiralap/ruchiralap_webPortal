@@ -4,14 +4,17 @@ import Categories from "./Categories/Categories";
 import Price from "./Price/Price";
 import Size from "./Size/Size";
 import Products from "../Products/Products";
+import { useContext } from "react";
+import { FilterContext } from "../../../Context/FilterProvider";
 
-const Sidebar = ({ result, handleChange }) => {
+const Sidebar = () => {
+  const { result, handleChange } = useContext(FilterContext);
+
   return (
     <>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content p-5">
-          {/* Page content here */}
           <label htmlFor="my-drawer-2" className="btn drawer-button lg:hidden">
             <IoReorderThree />
           </label>
@@ -26,7 +29,6 @@ const Sidebar = ({ result, handleChange }) => {
             className="drawer-overlay"
           ></label>
           <section className="menu p-10 w-80 min-h-full bg-base-200 md:bg-inherit text-base-content">
-            {/* Sidebar content here */}
             <Categories handleChange={handleChange} />
             <Price handleChange={handleChange} />
             <Size handleChange={handleChange} />
