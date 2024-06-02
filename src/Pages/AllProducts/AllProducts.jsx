@@ -2,66 +2,70 @@ import { useState } from "react";
 import Card from "../../Hooks/Card";
 import Sidebar from "./Sidebar/Sidebar";
 import useAllProducts from "../../Hooks/useAllProducts";
+import { useContext } from "react";
+import { FilterContext } from "../../Context/FilterProvider";
 
 const AllProducts = () => {
-  const [allProducts] = useAllProducts();
+  const { result, handleChange } = useContext(FilterContext);
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  // const [allProducts] = useAllProducts();
 
-  // ----------- Input Filter -----------
-  const [query, setQuery] = useState("");
+  // const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // const handleInputChange = (event) => {
-  //   setQuery(event.target.value);
-  // };
+  // // ----------- Input Filter -----------
+  // const [query, setQuery] = useState("");
 
-  const filteredItems = allProducts?.filter(
-    (product) =>
-      product.product_name.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
+  // // const handleInputChange = (event) => {
+  // //   setQuery(event.target.value);
+  // // };
 
-  // ----------- Radio Filtering -----------
-  const handleChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
+  // const filteredItems = allProducts?.filter(
+  //   (product) =>
+  //     product.product_name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  // );
 
-  // ------------ Button Filtering -----------
-  // const handleClick = (event) => {
+  // // ----------- Radio Filtering -----------
+  // const handleChange = (event) => {
   //   setSelectedCategory(event.target.value);
   // };
 
-  function filteredData(products, selected, query) {
-    let filteredProducts = products;
+  // // ------------ Button Filtering -----------
+  // // const handleClick = (event) => {
+  // //   setSelectedCategory(event.target.value);
+  // // };
 
-    // Filtering Input Items
-    if (query) {
-      filteredProducts = filteredItems;
-    }
+  // function filteredData(products, selected, query) {
+  //   let filteredProducts = products;
 
-    // Applying selected filter
-    if (selected) {
-      filteredProducts = filteredProducts.filter(
-        ({ category_name, price, product_name }) =>
-          category_name === selected ||
-          price === selected ||
-          product_name === selected
-      );
-    }
+  //   // Filtering Input Items
+  //   if (query) {
+  //     filteredProducts = filteredItems;
+  //   }
 
-    return filteredProducts.map(
-      ({ product_name, product_image, price, _id }) => (
-        <Card
-          key={Math.random()}
-          product_name={product_name}
-          product_image={product_image}
-          price={price}
-          _id={_id}
-        />
-      )
-    );
-  }
+  //   // Applying selected filter
+  //   if (selected) {
+  //     filteredProducts = filteredProducts.filter(
+  //       ({ category_name, price, product_name }) =>
+  //         category_name === selected ||
+  //         price === selected ||
+  //         product_name === selected
+  //     );
+  //   }
 
-  const result = filteredData(allProducts, selectedCategory, query);
+  //   return filteredProducts.map(
+  //     ({ product_name, product_image, price, _id }) => (
+  //       <Card
+  //         key={Math.random()}
+  //         product_name={product_name}
+  //         product_image={product_image}
+  //         price={price}
+  //         _id={_id}
+  //       />
+  //     )
+  //   );
+  // }
+
+  // const result = filteredData(allProducts, selectedCategory, query);
 
   return (
     <>
