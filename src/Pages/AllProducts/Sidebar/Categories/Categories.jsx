@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Input from "../../../../Hooks/Input";
 
-const Categories = ({ handleCategory }) => {
+const Categories = ({ handleChange }) => {
   return (
     <>
       <div>
@@ -9,37 +9,37 @@ const Categories = ({ handleCategory }) => {
         <div className=" mt-8">
           <div className=" grid space-y-2">
             <Input
-              handleChange={handleCategory}
+              handleChange={handleChange}
               value="all"
               title="All"
               name="test"
             />
             <Input
-              handleChange={handleCategory}
+              handleChange={handleChange}
               value="Organic Oil"
               title="Organic Oil"
               name="test"
             />
             <Input
-              handleChange={handleCategory}
+              handleChange={handleChange}
               value="Honey"
               title="Honey"
               name="test"
             />
             <Input
-              handleChange={handleCategory}
+              handleChange={handleChange}
               value="Nuts & Seeds"
               title="Nuts & Seeds"
               name="test"
             />
             <Input
-              handleChange={handleCategory}
+              handleChange={handleChange}
               value="Local Maghi Sarisha Oil"
               title="Local Maghi Sarisha Oil"
               name="test"
             />
             <Input
-              handleChange={handleCategory}
+              handleChange={handleChange}
               value="Masala"
               title="Masala"
               name="test"

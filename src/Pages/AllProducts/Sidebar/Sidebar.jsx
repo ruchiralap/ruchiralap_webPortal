@@ -3,10 +3,9 @@ import { IoReorderThree } from "react-icons/io5";
 import Categories from "./Categories/Categories";
 import Price from "./Price/Price";
 import Size from "./Size/Size";
-import Colors from "./Colors/Colors";
 import Products from "../Products/Products";
 
-const Sidebar = ({ handleCategory, isProducts, handlePrice }) => {
+const Sidebar = ({ result, handleChange }) => {
   return (
     <>
       <div className="drawer lg:drawer-open">
@@ -17,7 +16,7 @@ const Sidebar = ({ handleCategory, isProducts, handlePrice }) => {
             <IoReorderThree />
           </label>
           <section>
-            <Products products={isProducts} />
+            <Products result={result} />
           </section>
         </div>
         <div className="drawer-side border-r-2">
@@ -28,10 +27,9 @@ const Sidebar = ({ handleCategory, isProducts, handlePrice }) => {
           ></label>
           <section className="menu p-10 w-80 min-h-full bg-base-200 md:bg-inherit text-base-content">
             {/* Sidebar content here */}
-            <Categories handleCategory={handleCategory} />
-            <Price handlePrice={handlePrice}  />
-            <Colors  />
-            <Size  />
+            <Categories handleChange={handleChange} />
+            <Price handleChange={handleChange} />
+            <Size />
           </section>
         </div>
       </div>

@@ -1,38 +1,72 @@
-import { useEffect, useState } from "react";
-import useAllProducts from "../../Hooks/useAllProducts";
+import { useState } from "react";
+import Card from "../../Hooks/Card";
 import Sidebar from "./Sidebar/Sidebar";
+import useAllProducts from "../../Hooks/useAllProducts";
 
 const AllProducts = () => {
   const [allProducts] = useAllProducts();
-  const [isProducts, setIsProducts] = useState([]);
 
-  useEffect(() => {
-    setIsProducts(allProducts);
-  }, [allProducts]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const handleCategory = (e) => {
-    const categoryName = allProducts.filter((itm) =>
-      itm.category_name.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    setIsProducts(categoryName);
+  // ----------- Input Filter -----------
+  const [query, setQuery] = useState("");
+
+  // const handleInputChange = (event) => {
+  //   setQuery(event.target.value);
+  // };
+
+  const filteredItems = allProducts?.filter(
+    (product) =>
+      product.product_name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  );
+
+  // ----------- Radio Filtering -----------
+  const handleChange = (event) => {
+    setSelectedCategory(event.target.value);
   };
 
-  const handlePrice = (e) => {
-    const categoryName = allProducts.filter((itm) =>
-      itm.price.toLowerCase().includes(e.target.value.toLowerCase())
+  // ------------ Button Filtering -----------
+  // const handleClick = (event) => {
+  //   setSelectedCategory(event.target.value);
+  // };
+
+  function filteredData(products, selected, query) {
+    let filteredProducts = products;
+
+    // Filtering Input Items
+    if (query) {
+      filteredProducts = filteredItems;
+    }
+
+    // Applying selected filter
+    if (selected) {
+      filteredProducts = filteredProducts.filter(
+        ({ category_name, price, product_name }) =>
+          category_name === selected ||
+          price === selected ||
+          product_name === selected
+      );
+    }
+
+    return filteredProducts.map(
+      ({ product_name, product_image, price, _id }) => (
+        <Card
+          key={Math.random()}
+          product_name={product_name}
+          product_image={product_image}
+          price={price}
+          _id={_id}
+        />
+      )
     );
-    setIsProducts(categoryName);
-  };
+  }
+
+  const result = filteredData(allProducts, selectedCategory, query);
 
   return (
     <>
       <div className=" mt-10">
-        <Sidebar
-          isProducts={isProducts}
-          products={allProducts}
-          handleCategory={handleCategory}
-          handlePrice={handlePrice}
-        />
+        <Sidebar result={result} handleChange={handleChange} />
       </div>
     </>
   );
