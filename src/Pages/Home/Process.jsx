@@ -44,9 +44,15 @@ const Process = () => {
         animate="visible"
         variants={containerVariants}
       >
-        <h1 className="text-3xl md:text-5xl font-extrabold text-[#332A08] text-center">
-          PROCESS WE FOLLOW
-        </h1>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-3xl md:text-5xl font-extrabold text-[#332A08] text-center">
+            PROCESS WE FOLLOW
+          </h1>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-14 mt-10">
           {[
             {
@@ -74,10 +80,16 @@ const Process = () => {
               variants={iconVariants}
             >
               <div className="avatar">
-                <div className="p-3 bg-[#E2DCC6] rounded-full text-6xl">{item.icon}</div>
+                <motion.div
+                  className="p-3 bg-[#E2DCC6] rounded-full text-6xl"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {item.icon}
+                </motion.div>
               </div>
               <motion.p
-                className="mt-2 text-sm font-medium text-center"
+                className="mt-2 font-medium text-center"
                 variants={textVariants}
               >
                 {item.text}
