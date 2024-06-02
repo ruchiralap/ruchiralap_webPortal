@@ -8,12 +8,15 @@ const Categories = ({ handleChange }) => {
         <h2 className=" text-2xl font-semibold text-[#201700]">Categories</h2>
         <div className=" mt-8">
           <div className=" grid space-y-2">
-            <Input
-              handleChange={handleChange}
-              value="all"
-              title="All"
-              name="test"
-            />
+            <label className=" flex items-center gap-1 font-medium hover:cursor-pointer">
+              <input
+                onChange={handleChange}
+                type="radio"
+                value=""
+                name="test"
+              />
+              <span className="checkmark"></span>All
+            </label>
             <Input
               handleChange={handleChange}
               value="Organic Oil"
