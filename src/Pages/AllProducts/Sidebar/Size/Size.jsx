@@ -7,12 +7,10 @@ const Size = ({ handleChange }) => {
       <div className=" mt-10">
         <h2 className=" text-2xl font-semibold text-[#201700]">Size</h2>
         <div className=" mt-8 flex flex-wrap items-center gap-5">
-          <Input
-            handleChange={handleChange}
-            value={0}
-            title="All"
-            name="taste3"
-          />
+          <label className=" flex items-center gap-1 font-medium hover:cursor-pointer">
+            <input onChange={handleChange} type="radio" value="" name="test2" />
+            <span className="checkmark"></span>All
+          </label>
           <Input
             handleChange={handleChange}
             value={500}
