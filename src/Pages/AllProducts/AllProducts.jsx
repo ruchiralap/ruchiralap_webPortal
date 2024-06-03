@@ -1,7 +1,11 @@
+import Sidebar from "./Sidebar/Sidebar";
+
 const AllProducts = () => {
   return (
     <>
-      <div></div>
+      <div className=" mt-10">
+        <Sidebar />
+      </div>
     </>
   );
 };
