@@ -44,9 +44,9 @@ const Sidebar = () => {
             className="drawer-overlay"
           ></label>
 
-          <section className="menu p-10 w-80 min-h-full bg-base-200 md:bg-inherit text-base-content">
+          <section className="menu p-10 w-80 min-h-full bg-base-200 lg:bg-inherit text-base-content">
             <div
-              className="flex items-center justify-end rounded-md px-4 py-2 border absolute right-5 hover:cursor-pointer shadow-md"
+              className="flex lg:hidden items-center justify-end rounded-md px-4 py-2 border absolute right-5 hover:cursor-pointer shadow-md"
               onClick={handleCloseDrawer}
             >
               <RxCross2 className=" text-xl" />

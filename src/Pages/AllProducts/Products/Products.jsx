@@ -1,15 +1,27 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
+import { FilterContext } from "../../../Context/FilterProvider";
+
 const Products = ({ result }) => {
+  const { handleMinPriceChange, handleMaxPriceChange } =
+    useContext(FilterContext);
+
   return (
     <>
-      <div className=" flex items-center justify-end md:px-5">
-        <select className="select w-full max-w-[170px] bg-[#FFFBE8] border border-[#201700] rounded-full focus:outline-none">
-          <option disabled selected>
-            Best Match
-          </option>
-          <option>Price Low to High</option>
-          <option>Price High to Low</option>
-        </select>
+      <div>
+        {/* Price range filter */}
+        <div>
+          <input
+            type="number"
+            placeholder="Min Price"
+            onChange={handleMinPriceChange}
+          />
+          <input
+            type="number"
+            placeholder="Max Price"
+            onChange={handleMaxPriceChange}
+          />
+        </div>
       </div>
       <div>
         <section className="mt-5 grid grid-cols-2 md:grid-cols-3 gap-5">
