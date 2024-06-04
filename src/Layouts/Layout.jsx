@@ -5,9 +5,11 @@ import Footer from "../Shared/Footer/Footer";
 const Layouts = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className=" overflow-hidden">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 };

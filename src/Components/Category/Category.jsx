@@ -46,7 +46,7 @@ const Category = () => {
                       />
                     </motion.div>
                     <div className="">
-                      <p className="text-xl font-medium text-[#201700] text-center py-4 hover:underline">
+                      <p className="text-xl font-medium hover:underline text-[#201700] text-center py-4">
                         {category?.category_name}
                       </p>
                     </div>

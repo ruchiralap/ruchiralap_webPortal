@@ -9,6 +9,20 @@ export default {
       fontFamily: {
         libre: ['"Libre Baskerville"', "serif"],
       },
+      keyframes: {
+        expand: {
+          "0%": { clipPath: "circle(0% at 90% 10%)" },
+          "100%": { clipPath: "circle(150% at 90% 10%)" },
+        },
+        collapse: {
+          "0%": { clipPath: "circle(150% at 90% 10%)" },
+          "100%": { clipPath: "circle(0% at 90% 10%)" },
+        },
+      },
+      animation: {
+        expand: "expand 1s forwards",
+        collapse: "collapse 1s forwards",
+      },
     },
   },
   plugins: [require("daisyui")],
