@@ -4,7 +4,7 @@ import { FilterContext } from "../../../Context/FilterProvider";
 import { GoChevronDown } from "react-icons/go";
 import { RxCross2 } from "react-icons/rx";
 import Categories from "./Categories/Categories";
-import Price from "./Price/Price";
+// import Price from "./Price/Price";
 import Size from "./Size/Size";
 import Products from "../Products/Products";
 
@@ -29,7 +29,7 @@ const Sidebar = () => {
         />
         <div className="drawer-content p-5">
           <label htmlFor="my-drawer-2" className="lg:hidden">
-            <div className="flex items-center gap-1 hover:border px-4 py-2 rounded-md bg-[#F6CF0F] text-[#201700] font-medium hover:bg-none absolute">
+            <div className="flex -top-[27px] items-center gap-1 hover:border px-4 py-2 rounded-md bg-[#F6CF0F] text-[#201700] font-medium hover:bg-none absolute">
               Filter <GoChevronDown className=" text-xl" />
             </div>
           </label>
@@ -52,7 +52,7 @@ const Sidebar = () => {
               <RxCross2 className=" text-xl" />
             </div>
             <Categories handleChange={handleChange} />
-            <Price handleChange={handleChange} />
+            {/* <Price handleChange={handleChange} /> */}
             <Size handleChange={handleChange} />
           </section>
         </div>
