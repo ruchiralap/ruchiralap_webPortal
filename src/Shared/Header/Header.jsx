@@ -1,14 +1,16 @@
-import { AlignLeft, ChevronRight, ShoppingCart, X ,Phone} from "lucide-react";
+import { AlignLeft, ChevronRight, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import IsSearch from "./IsSearch";
+import { motion } from "framer-motion";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#ece7d4a8] bg-gradient-to-r from-[#ece7d4a8] via-[#fff0b3]
-     to-[#ece7d4a8] text-black font-roboto">
+    <nav
+      className="bg-[#ece7d4a8] bg-gradient-to-r from-[#ece7d4a8] via-[#fff0b3]
+     to-[#ece7d4a8] text-black font-roboto"
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between text-xl  h-40">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -81,34 +83,15 @@ function Header() {
 
           <div className="flex-shrink-0 flex md:items-center md:justify-start absolute  transform md:-translate-x-1/2 ml-11">
             <Link to="/">
-              {/* <h3 className=" md:text-4xl font-mono bg-flag mr-20">
-                Ruchir Alapp
-              </h3> */}
-
-
-             <img className="w-1/2" src="https://i.ibb.co/Xjnjnhh/rucir-alaplogo-removebg-preview.png" alt="" srcset="" />
-
+              <img
+                className="w-1/2"
+                src="https://i.ibb.co/Xjnjnhh/rucir-alaplogo-removebg-preview.png"
+                alt=""
+              />
             </Link>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex  items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <IsSearch />
-
-          
-
-            <div className="flex mx-5 text-xl my-3 ">
-              <div className="flex items-center pe-2">
-          
-              <Phone  />
-              </div>
-           
-            <div>
-            <p className=" text-sm">Call Us :</p>
-            <p  ><b>783264873 </b></p>
-            </div>
-           
-
-            </div>
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
               <span className="sr-only">View Cart</span>
               <ShoppingCart className="text-[#201700] " />
@@ -119,12 +102,18 @@ function Header() {
 
       {/* Mobile menu, show/hide based on menu state */}
       <div
-        className={`sm:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
-        }`}
+        className={`sm:hidden ${
+          isOpen ? "block" : "hidden"
+        } transition-all duration-300 ease-in-out`}
         id="mobile-menu"
       >
-        <div className="px-4 pt-2 pb-3 space-y-5 menu">
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="px-4 pt-2 pb-3 space-y-5 menu"
+        >
           <hr />
           <div className=" flex items-center justify-between">
             <NavLink
@@ -190,7 +179,7 @@ function Header() {
             </NavLink>
             <ChevronRight />
           </div>
-        </div>
+        </motion.div>
       </div>
     </nav>
   );
