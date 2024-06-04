@@ -6,12 +6,13 @@ import Banner from "../Pages/Home/Banner/Banner";
 const Layouts = () => {
   return (
     <>
-      <Header />
-   
-      <div className=" min-h-screen">
+
+      <div className=" overflow-hidden">
+        <Header />
         <Outlet />
+        <Footer />
       </div>
-      <Footer />
+
     </>
   );
 };
