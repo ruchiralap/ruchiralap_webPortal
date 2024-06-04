@@ -51,26 +51,25 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <form>
-              <h6 className="text-2xl text-[#FCFCFC] font-semibold">
-                Newsletter
-              </h6>
-              <fieldset className="form-control w-80">
-                <label className="label">
-                  <span className="label-text text-slate-300">
-                    Enter your email address
-                  </span>
-                </label>
-                <div className="join">
-                  <input
-                    type="text"
-                    placeholder="username@site.com"
-                    className=" border border-slate-100 input join-item bg-transparent text-slate-50"
-                  />
-                  <button className="btn border bg-[#FFFBE8]">Subscribe</button>
-                </div>
-              </fieldset>
-            </form>
+            <h6 className="text-2xl text-[#FCFCFC] font-semibold">
+              Newsletter
+            </h6>
+            <section className=" mt-2 flex items-center justify-start">
+              <div>
+                <input
+                  className=" focus:outline-none border-none bg-[#FFFBE8] rounded-l-md px-5 py-2"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="exapmle@gmail.com"
+                />
+              </div>
+              <div>
+                <button className=" py-[7px] px-3 border rounded-r-md border-[#FFFBE8] text-[#FFFBE8]">
+                  Subscribe
+                </button>
+              </div>
+            </section>
           </div>
         </div>
       </section>

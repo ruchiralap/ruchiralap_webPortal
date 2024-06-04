@@ -1,15 +1,18 @@
 import { AlignLeft, ChevronRight, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#FFFBE8] text-black font-roboto">
+    <nav
+      className="bg-[#ece7d4a8] bg-gradient-to-r from-[#ece7d4a8] via-[#fff0b3]
+     to-[#ece7d4a8] text-black font-roboto"
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
+        <div className="relative flex items-center justify-between text-xl  h-40">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
             <button
@@ -23,7 +26,7 @@ function Header() {
               {isOpen ? <X /> : <AlignLeft />}
             </button>
           </div>
-          <div className="flex-1 flex items-center justify-start">
+          <div className="flex-1 flex items-center justify-center">
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-5">
                 <NavLink
@@ -78,18 +81,20 @@ function Header() {
             </div>
           </div>
 
-          <div className="flex-shrink-0 flex md:items-center md:justify-center absolute md:left-1/2 transform md:-translate-x-1/2 ml-11">
+          <div className="flex-shrink-0 flex md:items-center md:justify-start absolute  transform md:-translate-x-1/2 ml-11">
             <Link to="/">
-              <h3 className=" md:text-4xl font-mono bg-flag mr-20">
-                Ruchir Alap
-              </h3>
+              <img
+                className="w-1/2"
+                src="https://i.ibb.co/Xjnjnhh/rucir-alaplogo-removebg-preview.png"
+                alt=""
+              />
             </Link>
           </div>
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
               <span className="sr-only">View Cart</span>
-              <ShoppingCart className="text-[#201700]" />
+              <ShoppingCart className="text-[#201700] " />
             </button>
           </div>
         </div>
