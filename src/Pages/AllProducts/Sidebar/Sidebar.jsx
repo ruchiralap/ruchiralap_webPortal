@@ -6,6 +6,7 @@ import Size from "./Size/Size";
 import Products from "../Products/Products";
 import { useContext } from "react";
 import { FilterContext } from "../../../Context/FilterProvider";
+import { GoChevronDown } from "react-icons/go";
 
 const Sidebar = () => {
   const { result, handleChange } = useContext(FilterContext);
@@ -15,8 +16,10 @@ const Sidebar = () => {
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content p-5">
-          <label htmlFor="my-drawer-2" className="btn drawer-button lg:hidden">
-            <IoReorderThree />
+          <label htmlFor="my-drawer-2" className="lg:hidden">
+            <div className="flex items-center gap-1 hover:border px-4 py-2 rounded-md bg-[#F6CF0F] text-[#201700] font-medium hover:bg-none absolute">
+              Filter <GoChevronDown className=" text-xl" />
+            </div>
           </label>
           <section>
             <Products result={result} />

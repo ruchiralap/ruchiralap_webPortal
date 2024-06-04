@@ -42,10 +42,8 @@ const FilterProvider = ({ children }) => {
     // Applying selected filter
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category_name, price, product_name }) =>
-          category_name === selected ||
-          price === selected ||
-          product_name === selected
+        ({ category_name, price }) =>
+          category_name === selected || price === selected
       );
     }
 
