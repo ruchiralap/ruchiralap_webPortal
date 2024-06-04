@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <div>
-      <div className="h-10 text-xl bg-black font-bold text-[#fff0b3] justify-center flex items-center">
+      <div className="h-10 text-xl bg-black font-bold text-[#fff0b3] justify-center  flex items-center">
         <Marquee>
           <p>Welcome to Ruchir Alap</p>
         </Marquee>
@@ -18,7 +18,7 @@ function Header() {
      to-[#ece7d4a8] text-black font-roboto"
       >
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="relative flex items-center justify-between text-xl  h-40">
+          <div className="relative flex items-center justify-between text-xl  lg:h-36 h-20">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button */}
               <button
@@ -87,14 +87,15 @@ function Header() {
               </div>
             </div>
 
-            <div className="flex-shrink-0 flex md:items-center md:justify-start absolute  transform md:-translate-x-1/2 ml-11">
+            <div className=" justify-center flex md:items-center md:justify-start  absolute  transform md:-translate-x-1/2  ml-5 lg:ml-11">
               <Link to="/">
                 {/* <h3 className=" md:text-4xl font-mono bg-flag mr-20">
                 Ruchir Alapp
               </h3> */}
 
                 <img
-                  className="w-1/2"
+                  id="logo"
+                  className="lg:w-1/2 w-1/3"
                   src="https://i.ibb.co/Xjnjnhh/rucir-alaplogo-removebg-preview.png"
                   alt=""
                   srcset=""
@@ -102,10 +103,10 @@ function Header() {
               </Link>
             </div>
 
-            <div className="absolute inset-y-0 right-0 md:flex hidden   items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <IsSearch />
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <IsSearch className="md:flex hidden  " />
 
-              <div className="md:flex hidden  mx-5 text-xl my-3 ">
+              <div className="lg:flex md:hidden hidden  mx-5 text-xl my-3 ">
                 <div className=" items-center pe-2">
                   <Phone />
                 </div>
@@ -117,7 +118,7 @@ function Header() {
                   </p>
                 </div>
               </div>
-              <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
+              <button className="md:ml-4 p-1 md:flex hidden  rounded-full text-gray-400 hover:text-white">
                 <span className="sr-only">View Cart</span>
                 <ShoppingCart className="text-[#201700] " />
               </button>
