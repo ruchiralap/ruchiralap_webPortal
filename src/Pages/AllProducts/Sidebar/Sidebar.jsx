@@ -4,9 +4,11 @@ import { FilterContext } from "../../../Context/FilterProvider";
 import { GoChevronDown } from "react-icons/go";
 import { RxCross2 } from "react-icons/rx";
 import Categories from "./Categories/Categories";
-// import Price from "./Price/Price";
+import Price from "./Price/Price";
 import Size from "./Size/Size";
 import Products from "../Products/Products";
+import Colors from "./Colors/Colors";
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const { result, handleChange } = useContext(FilterContext);
@@ -18,6 +20,16 @@ const Sidebar = () => {
     }
   };
 
+  // Framer Animation
+  const drawerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const hoverVariants = {
+    hover: { scale: 1.1 },
+  };
+
   return (
     <>
       <div className="drawer lg:drawer-open">
@@ -27,16 +39,26 @@ const Sidebar = () => {
           className="drawer-toggle"
           ref={drawerCheckboxRef}
         />
-        <div className="drawer-content p-5">
+        <motion.div
+          className="drawer-content p-5"
+          initial="hidden"
+          animate="visible"
+          variants={drawerVariants}
+          transition={{ duration: 0.5 }}
+        >
           <label htmlFor="my-drawer-2" className="lg:hidden">
-            <div className="flex -top-[27px] items-center gap-1 hover:border px-4 py-2 rounded-md bg-[#F6CF0F] text-[#201700] font-medium hover:bg-none absolute">
-              Filter <GoChevronDown className=" text-xl" />
-            </div>
+            <motion.div
+              className="flex -top-[27px] items-center gap-1 hover:border px-4 py-2 rounded-md text-[#201700] font-medium hover:bg-none absolute"
+              whileHover="hover"
+              variants={hoverVariants}
+            >
+              Filter <GoChevronDown className="text-xl animate-bounce" />
+            </motion.div>
           </label>
           <section>
             <Products result={result} />
           </section>
-        </div>
+        </motion.div>
         <div className="drawer-side border-r-2">
           <label
             htmlFor="my-drawer-2"
@@ -45,14 +67,18 @@ const Sidebar = () => {
           ></label>
 
           <section className="menu p-10 w-80 min-h-full bg-base-200 lg:bg-inherit text-base-content">
-            <div
+            <motion.div
               className="flex lg:hidden items-center justify-end rounded-md px-4 py-2 border absolute right-5 hover:cursor-pointer shadow-md"
               onClick={handleCloseDrawer}
+              whileHover={{ scale: 1.1, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <RxCross2 className=" text-xl" />
-            </div>
+              <RxCross2 className="text-xl" />
+            </motion.div>
             <Categories handleChange={handleChange} />
-            {/* <Price handleChange={handleChange} /> */}
+            <Colors handleChange={handleChange} />
+            <Price handleChange={handleChange} />
             <Size handleChange={handleChange} />
           </section>
         </div>
