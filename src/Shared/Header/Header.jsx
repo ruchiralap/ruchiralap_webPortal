@@ -1,7 +1,7 @@
 import { AlignLeft, ChevronRight, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import IsSearch from "./IsSearch";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,8 +87,6 @@ function Header() {
           </div>
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <IsSearch />
-
             <button className="md:ml-4 p-1 rounded-full text-gray-400 hover:text-white">
               <span className="sr-only">View Cart</span>
               <ShoppingCart className="text-[#201700]" />
@@ -99,12 +97,18 @@ function Header() {
 
       {/* Mobile menu, show/hide based on menu state */}
       <div
-        className={`sm:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
-        }`}
+        className={`sm:hidden ${
+          isOpen ? "block" : "hidden"
+        } transition-all duration-300 ease-in-out`}
         id="mobile-menu"
       >
-        <div className="px-4 pt-2 pb-3 space-y-5 menu">
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="px-4 pt-2 pb-3 space-y-5 menu"
+        >
           <hr />
           <div className=" flex items-center justify-between">
             <NavLink
@@ -170,7 +174,7 @@ function Header() {
             </NavLink>
             <ChevronRight />
           </div>
-        </div>
+        </motion.div>
       </div>
     </nav>
   );
