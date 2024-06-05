@@ -1,5 +1,5 @@
 import SharedBanner from "../../Shared/SharedBanner/SharedBanner";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { BookOpenText, Clock, MapPin } from "lucide-react";
