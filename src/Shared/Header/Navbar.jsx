@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <section className="bg-[#201700] text-[#FFF3BC] flex items-center justify-between">
-        <div className="flex md:items-center w-full">
+        <div className="flex md:items-center w-full gap-10">
           <div className="">
             <Link to="/">
               <div className="avatar">
@@ -22,7 +22,7 @@ const Navbar = () => {
             <IsSearch />
           </div>
         </div>
-        <div className=" flex items-center gap-4 px-10">
+        <div className=" flex items-center gap-4 px-10 w-full justify-end">
           <div className=" hover:cursor-pointer border border-[#FFF3BC] p-1 rounded-md">
             <Link to="/contact">
               <MdAddIcCall className=" text-2xl" />
