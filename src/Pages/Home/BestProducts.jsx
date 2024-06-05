@@ -28,7 +28,7 @@ const BestProducts = () => {
             allProducts.slice(0, 9).map((product, index) => (
               <motion.div
                 key={product?._id}
-                className="mt-36 relative"
+                className=" bg-[#fff3bc]"
                 style={
                   index % 2 === 0
                     ? { y: yScrollUp, opacity: opacityScrollUp }
@@ -36,13 +36,13 @@ const BestProducts = () => {
                 }
               >
                 <motion.div
-                  className="-ml-4 bg-transparent rounded-3xl absolute -mt-[9rem] flex items-center justify-center"
+                  className=""
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Link to={`/productDetails/${product?._id}`}>
                     <motion.img
-                      className="w-full mx-auto rounded-3xl"
+                      className="w-full h-[320px] mx-auto rounded-3xl"
                       src={product?.product_image}
                       alt="Product Image"
                       whileHover={{ scale: 1.1 }}
@@ -50,7 +50,7 @@ const BestProducts = () => {
                     />
                   </Link>
                 </motion.div>
-                <div className="flex items-center justify-between pt-[12rem] pb-5 px-5 bg-[#F0EBD8] rounded-3xl shadow-md hover:shadow-2xl transition-shadow duration-300">
+                <div className="px-4 pb-8 flex items-center justify-between">
                   <div className="text-[#443930]">
                     <Link to={`/productDetails/${product?._id}`}>
                       <h4 className="text-xl font-semibold">
@@ -63,7 +63,7 @@ const BestProducts = () => {
                     </p>
                   </div>
                   <div>
-                    <button className="p-3 rounded-full bg-[#E1DAC5] hover:bg-[#493A00] hover:text-[#D7D0CC] transition-colors duration-300">
+                    <button className="p-3 rounded-full bg-[#FFFBE8] hover:bg-[#EEAB0F] hover:text-white transition-colors duration-300">
                       <MdAddShoppingCart className="text-2xl" />
                     </button>
                   </div>
@@ -75,7 +75,7 @@ const BestProducts = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="bg-[#F6CF0F] text-[#332A07] font-bold py-2 px-4 rounded-full"
+            className="bg-[#EEAB0F] text-white font-bold py-2 px-4"
           >
             <Link to="/allProducts">See More...</Link>
           </motion.button>

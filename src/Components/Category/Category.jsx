@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useCategory from "../../Hooks/useCategory";
+import AnimatedButton from "../../Hooks/AnimatedButton";
 
 const Category = () => {
   const [allCategory] = useCategory();
@@ -14,7 +15,7 @@ const Category = () => {
             Our Top Collection's
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {allCategory &&
             allCategory.map((category) => (
               <motion.div
@@ -30,25 +31,25 @@ const Category = () => {
                 >
                   <div>
                     <motion.div
-                      className="avatar rounded-full bg-[#E1DAC5]"
+                      className="bg-[#fff3bc] w-full h-[250px]"
                       initial={{ scale: 0.9 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.3 }}
                     >
                       <motion.img
-                        className="w-full mx-auto rounded-full"
+                        className=" w-[250px] mx-auto rounded-full"
                         src={category?.category_image}
                         alt="Category Image"
                         initial={{ clipPath: "circle(0% at 50% 50%)" }}
                         animate={{ clipPath: "circle(50% at 50% 50%)" }}
                         transition={{ duration: 0.5 }}
-                        whileHover={{ rotateY: 180 }}
                       />
                     </motion.div>
-                    <div className="">
-                      <p className="text-xl font-medium hover:underline text-[#201700] text-center py-4">
-                        {category?.category_name}
-                      </p>
+                    <div>
+                      <AnimatedButton
+                        borderColor="border-[#EEAB0F]"
+                        text={category?.category_name}
+                      />
                     </div>
                   </div>
                 </Link>

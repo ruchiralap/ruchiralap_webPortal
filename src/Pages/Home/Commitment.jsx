@@ -33,7 +33,7 @@ const Commitment = () => {
       <div className="mt-10 flex items-center justify-center">
         <Link to="/allProducts">
           <motion.button
-            className="rounded-full px-12 py-4 text-[#201700] bg-[#F9C302] font-extrabold"
+            className="px-12 py-4 text-white bg-[#EEAB0F] font-extrabold"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 50 }}
