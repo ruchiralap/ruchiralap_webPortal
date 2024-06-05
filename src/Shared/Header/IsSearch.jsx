@@ -10,7 +10,7 @@ const IsSearch = () => {
     <>
       <div className="relative">
         <input
-          className=" border border-[#FFF3BC] bg-none bg-transparent w-full focus:outline-none rounded-full px-8 py-2"
+          className=" border border-[#FFF3BC] bg-none bg-transparent md:w-full focus:outline-none rounded-full px-8 py-2"
           type="search"
           onChange={handleInputChange}
           name=""
