@@ -45,7 +45,7 @@ const Category = () => {
                         transition={{ duration: 0.5 }}
                       />
                     </motion.div>
-                    <div>
+                    <div className="text-center">
                       <AnimatedButton
                         borderColor="border-[#EEAB0F]"
                         text={category?.category_name}
