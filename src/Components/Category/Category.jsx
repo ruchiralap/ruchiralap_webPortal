@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useCategory from "../../Hooks/useCategory";
 import AnimatedButton from "../../Hooks/AnimatedButton";
+import SectionTitle from "../../Hooks/SectionTitle";
 
 const Category = () => {
   const [allCategory] = useCategory();
@@ -11,11 +12,9 @@ const Category = () => {
     <>
       <div className="w-11/12 mx-auto mt-44">
         <div>
-          <h2 className="text-5xl font-extrabold text-[#362A0A] mb-14">
-            Our Top Collection's
-          </h2>
+          <SectionTitle title="Our Top Collection's" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
           {allCategory &&
             allCategory.map((category) => (
               <motion.div

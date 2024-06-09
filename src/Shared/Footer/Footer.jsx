@@ -54,6 +54,7 @@ const Footer = () => {
             <h6 className="text-2xl text-[#FCFCFC] font-semibold">
               Newsletter
             </h6>
+            <p className=" text-gray-200">cultivating the soil, growing crops.</p>
             <section className=" mt-2 flex items-center justify-start">
               <div>
                 <input

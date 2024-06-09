@@ -48,7 +48,7 @@ function Header() {
                       : "nav-pending-color"
                   }
                 >
-                  All Products
+                  Products
                 </NavLink>
                 <NavLink
                   to="/about"
