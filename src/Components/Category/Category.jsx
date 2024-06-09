@@ -12,7 +12,7 @@ const Category = () => {
     <>
       <div className="w-11/12 mx-auto mt-44">
         <div>
-          <SectionTitle title="Our Top Collection's" />
+          <SectionTitle title="Browse Our Hottest Categories" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
           {allCategory &&
