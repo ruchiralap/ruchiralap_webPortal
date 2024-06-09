@@ -28,7 +28,7 @@ const BestProducts = () => {
             allProducts.slice(0, 9).map((product, index) => (
               <motion.div
                 key={product?._id}
-                className=" bg-[#fff3bc]"
+                className=" bg-[#ce8e1e1b]"
                 style={
                   index % 2 === 0
                     ? { y: yScrollUp, opacity: opacityScrollUp }

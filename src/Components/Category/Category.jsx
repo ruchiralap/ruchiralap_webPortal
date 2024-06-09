@@ -31,7 +31,7 @@ const Category = () => {
                 >
                   <div>
                     <motion.div
-                      className="bg-[#fff3bc] w-full h-[250px]"
+                      className="bg-[#FAEFD4] w-full h-[250px]"
                       initial={{ scale: 0.9 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.3 }}

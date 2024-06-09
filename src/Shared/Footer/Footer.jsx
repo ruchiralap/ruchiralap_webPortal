@@ -73,8 +73,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <hr />
-      <footer className="footer footer-center p-4 bg-[#201700] text-[#FCFCFC]">
+      <footer className="footer footer-center p-4 bg-[#201700] text-[#FCFCFC] border-t-2 border-dashed border-[#4B4512]">
         <aside>
           <p>Copyright © 2024 - All right reserved by LBS Industries Ltd</p>
         </aside>

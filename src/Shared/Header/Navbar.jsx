@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="">
             <Link to="/">
               <div className="avatar">
-                <div className="md:w-[110px] w-[70px] rounded-full">
+                <div className="md:w-[100px] w-[70px] rounded-full">
                   <img src={logo} />
                 </div>
               </div>
