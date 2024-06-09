@@ -10,7 +10,7 @@ export default {
         libre: ['"Libre Baskerville"', "serif"],
       },
       backgroundImage: {
-        "commitment-bg": "url('/src/assets/commit-bg.png')",
+        "commitment-bg": "url('/src/assets/commitment.png')",
       },
       keyframes: {
         expand: {
