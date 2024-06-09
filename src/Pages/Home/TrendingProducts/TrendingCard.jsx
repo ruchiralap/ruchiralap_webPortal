@@ -4,7 +4,7 @@ import Card from "../../../Hooks/Card";
 const TrendingCard = ({ items }) => {
   return (
     <>
-      <section className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <section className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 mt-10">
         {items?.map((product) => (
           <Card
             key={product?._id}
