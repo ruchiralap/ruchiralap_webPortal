@@ -12,6 +12,8 @@ const FilterProvider = ({ children }) => {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(Infinity);
 
+  /////////// Pagination function \\\\\\\\\\\
+
   // Input filter
   const handleInputChange = (event) => {
     setQuery(event.target.value);
@@ -56,7 +58,8 @@ const FilterProvider = ({ children }) => {
 
     // Filtering by price range
     filteredProducts = filteredProducts.filter(
-      ({ price }) => parseFloat(price) >= minPrice && parseFloat(price) <= maxPrice
+      ({ price }) =>
+        parseFloat(price) >= minPrice && parseFloat(price) <= maxPrice
     );
 
     return filteredProducts.map(
@@ -72,7 +75,13 @@ const FilterProvider = ({ children }) => {
     );
   }
 
-  const result = filteredData(allProducts, selectedCategory, query, minPrice, maxPrice);
+  const result = filteredData(
+    allProducts,
+    selectedCategory,
+    query,
+    minPrice,
+    maxPrice
+  );
 
   const filterData = {
     handleInputChange,
