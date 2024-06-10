@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         libre: ['"Libre Baskerville"', "serif"],
       },
+      backgroundImage: {
+        "commitment-bg": "url('/src/assets/commitment.png')",
+      },
       keyframes: {
         expand: {
           "0%": { clipPath: "circle(0% at 90% 10%)" },

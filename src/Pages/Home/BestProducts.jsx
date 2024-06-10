@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import useAllProducts from "../../Hooks/useAllProducts";
 import { MdAddShoppingCart } from "react-icons/md";
+import SectionTitle from "../../Hooks/SectionTitle";
 
 const BestProducts = () => {
   const [allProducts] = useAllProducts();
@@ -18,17 +19,16 @@ const BestProducts = () => {
   return (
     <>
       <section className="mt-20 w-11/12 mx-auto">
-        <div className="mb-14">
-          <h3 className="text-5xl font-extrabold text-[#362A0A]">
-            Best Sell Products
-          </h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <SectionTitle
+          title="Most Popular & New Organic Food"
+          details="The demand for organic food is growing at a remarkable rate. Consumers have made it want organic produce and every sector of the food."
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {allProducts &&
             allProducts.slice(0, 9).map((product, index) => (
               <motion.div
                 key={product?._id}
-                className=" bg-[#fff3bc]"
+                className=" bg-[#ce8e1e1b]"
                 style={
                   index % 2 === 0
                     ? { y: yScrollUp, opacity: opacityScrollUp }
