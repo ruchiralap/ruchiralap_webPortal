@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to="/">
               <div className="avatar">
                 <div className="md:w-[100px] w-[70px] rounded-full">
-                  <img src={logo} />
+                  <img src={logo} alt="website logo image" />
                 </div>
               </div>
             </Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <IsSearch />
           </div>
         </div>
-        <div className=" flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 w-full justify-end">
+        <div className=" hidden md:flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 w-full justify-end">
           <div className=" hover:cursor-pointer border border-[#FFF3BC] p-1 rounded-md">
             <Link to="/contact">
               <MdAddIcCall className="md:text-2xl" />
