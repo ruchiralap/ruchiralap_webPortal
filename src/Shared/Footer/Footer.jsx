@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png";
 const Footer = () => {
   return (
     <>
-      <section className="bg-[#201700] p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <section className="bg-[#201700] px-10 py-20 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
@@ -32,7 +32,9 @@ const Footer = () => {
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
           <div className=" menu space-y-1 font-medium">
-            <h6 className=" text-2xl text-[#FCFCFC] font-semibold">Services</h6>
+            <h6 className=" text-2xl text-[#FCFCFC] font-semibold mb-2">
+              Services
+            </h6>
             <Link to="/bestSell">
               <a className="link link-hover hover:text-green-500 text-slate-300">
                 Best Sell
@@ -51,7 +53,7 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <h6 className="text-2xl text-[#FCFCFC] font-semibold">
+            <h6 className="text-2xl text-[#FCFCFC] font-semibold mb-2">
               Newsletter
             </h6>
             <p className=" text-gray-200">
