@@ -15,7 +15,7 @@ const Navbar = () => {
               <div className="">
                 <div className=" h-24 rounded-full">
                   <img
-                    className="lg:-top-[35px] -top-[25px] lg:w-[200px] md:w-[400px] w-[200px] relative"
+                    className="lg:-top-[35px] md:-top-[45px] -top-[35px] lg:w-[200px] md:w-[230px] w-[200px] relative"
                     src={logo}
                     alt="website logo image"
                   />
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* Icons */}
-        <div className="hidden md:flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 justify-end">
+        <div className="hidden lg:flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 justify-end">
           <div className=" flex items-center gap-3">
             <div>
               <BiSupport className=" text-black text-3xl md:text-5xl" />
