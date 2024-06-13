@@ -1,9 +1,15 @@
 import { AlignLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
 
   return (
     <nav className="header bg-[#FFF3BC]">
@@ -84,7 +90,9 @@ function Header() {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div
+      <motion.div
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
         className={`sm:hidden transition-all duration-1000 ease-in-out ${
           isOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
         }`}
@@ -166,7 +174,7 @@ function Header() {
           </div>
           <hr />
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 }
