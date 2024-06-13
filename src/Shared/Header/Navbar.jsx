@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { FaOpencart } from "react-icons/fa";
+import { FaOpencart, FaSearch } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 import logo from "../../assets/logo.png";
+import SearchModal from "./SearchModal";
 
 const Navbar = () => {
   return (
@@ -42,23 +43,43 @@ const Navbar = () => {
           </div>
         </div>
         {/* Icons */}
-        <div className="hidden lg:flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 justify-end">
-          <div className=" flex items-center gap-3">
+        <div>
+          {/* Section For Mobile Menu Start */}
+          <section className="lg:hidden flex items-center gap-4 px-3">
             <div>
-              <BiSupport className=" text-black text-3xl md:text-5xl" />
+              <button
+                className=" border border-[#EEAB0F] p-3 rounded-md"
+                onClick={() =>
+                  document.getElementById("my_modal_5").showModal()
+                }
+              >
+                <FaSearch className="md:text-2xl text-xl text-black " />
+              </button>
+              <SearchModal />
             </div>
-            <div className=" text-black">
-              <p>24/7 Support</p>
-              <p>+880 01770064053</p>
+            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-3 rounded-md">
+              <FaOpencart className="md:text-2xl text-xl text-black " />
             </div>
-          </div>
-          <div className=" hover:cursor-pointer border border-[#EEAB0F] p-1 rounded-md">
-            <Link to="/contact">
-              <MdAddIcCall className="md:text-2xl text-black" />
-            </Link>
-          </div>
-          <div className=" hover:cursor-pointer border border-[#EEAB0F] p-1 rounded-md">
-            <FaOpencart className="md:text-2xl text-black " />
+          </section>
+          {/* Section For Mobile Menu End */}
+          <div className="hidden lg:flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 justify-end">
+            <div className=" flex items-center gap-3">
+              <div>
+                <BiSupport className=" text-black text-3xl md:text-5xl" />
+              </div>
+              <div className=" text-black">
+                <p>24/7 Support</p>
+                <p>+880 01770064053</p>
+              </div>
+            </div>
+            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-1 rounded-md">
+              <Link to="/contact">
+                <MdAddIcCall className="md:text-2xl text-black" />
+              </Link>
+            </div>
+            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-1 rounded-md">
+              <FaOpencart className="md:text-2xl text-black " />
+            </div>
           </div>
         </div>
       </section>
