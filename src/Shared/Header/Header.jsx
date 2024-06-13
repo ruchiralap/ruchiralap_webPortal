@@ -1,9 +1,15 @@
 import { AlignLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
 
   return (
     <nav className="header bg-[#FFF3BC]">
@@ -84,13 +90,15 @@ function Header() {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div
-        className={`sm:hidden transition-all duration-300 ease-in-out ${
+      <motion.div
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        className={`sm:hidden transition-all duration-1000 ease-in-out ${
           isOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
         }`}
         id="mobile-menu"
       >
-        <div className="px-4 pt-2 pb-3 space-y-5 menu">
+        <div className="px-4 pt-2 pb-3 space-y-3 menu">
           <hr />
           <div className=" flex items-center justify-between">
             <NavLink
@@ -105,7 +113,9 @@ function Header() {
             >
               All Products
             </NavLink>
-            <ChevronRight />
+            <div className=" border rounded-md p-1">
+              <ChevronRight />
+            </div>
           </div>
           <hr />
           <div className=" flex items-center justify-between">
@@ -121,7 +131,9 @@ function Header() {
             >
               Home
             </NavLink>
-            <ChevronRight />
+            <div className=" border rounded-md p-1">
+              <ChevronRight />
+            </div>
           </div>
 
           <hr />
@@ -138,7 +150,9 @@ function Header() {
             >
               About
             </NavLink>
-            <ChevronRight />
+            <div className=" border rounded-md p-1">
+              <ChevronRight />
+            </div>
           </div>
           <hr />
           <div className=" flex items-center justify-between">
@@ -154,10 +168,13 @@ function Header() {
             >
               Contact
             </NavLink>
-            <ChevronRight />
+            <div className=" border rounded-md p-1">
+              <ChevronRight />
+            </div>
           </div>
+          <hr />
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 }

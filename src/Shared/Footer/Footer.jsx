@@ -1,29 +1,29 @@
 import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
     <>
-      {/* <div className="bg-[#201700] hover:cursor-pointer w-full mt-20">
-        <h3 className=" text-xl font-medium text-center py-2 text-slate-100 hover:text-[#E1DAC5] ">
-          Back to top
-        </h3>
-      </div> */}
-      <section className="bg-[#201700] p-10 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <section className="bg-[#201700] px-10 py-20 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
-              <h3 className=" md:text-4xl font-mono text-[#FCFCFC] mr-20">
-                Ruchir <span className=" text-[#FFFBE8]">Alap</span>
-              </h3>
+              <div className="relative h-20">
+                <img
+                  className=" absolute -top-[90px] -left-[40px] w-80"
+                  src={logo}
+                  alt="website logo image"
+                />
+              </div>
             </Link>
-            <p className=" text-sm text-slate-300 mt-2">
+            <p className=" text-sm text-slate-300 mt-10">
               Welcome to Ruchir Alap, your go-to destination for online
               shopping! Discover the latest trends and timeless classics in
               fashion, electronics, home essentials, and more.
             </p>
           </div>
-          <div className=" flex items-center gap-4 mt-5">
+          <div className=" flex items-center gap-4 mt-10">
             <Facebook className=" bg-sky-500 text-white rounded-md p-1 hover:cursor-pointer footerIcons" />
             <Twitter className=" bg-sky-500 text-white rounded-md p-1 hover:cursor-pointer footerIcons" />
             <Youtube className=" bg-red-500 text-white rounded-md p-1 hover:cursor-pointer footerIcons" />
@@ -32,7 +32,9 @@ const Footer = () => {
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
           <div className=" menu space-y-1 font-medium">
-            <h6 className=" text-2xl text-[#FCFCFC] font-semibold">Services</h6>
+            <h6 className=" text-2xl text-[#FCFCFC] font-semibold mb-2">
+              Services
+            </h6>
             <Link to="/bestSell">
               <a className="link link-hover hover:text-green-500 text-slate-300">
                 Best Sell
@@ -51,10 +53,12 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <h6 className="text-2xl text-[#FCFCFC] font-semibold">
+            <h6 className="text-2xl text-[#FCFCFC] font-semibold mb-2">
               Newsletter
             </h6>
-            <p className=" text-gray-200">cultivating the soil, growing crops.</p>
+            <p className=" text-gray-200">
+              cultivating the soil, growing crops.
+            </p>
             <section className=" mt-2 flex items-center justify-start">
               <div>
                 <input
