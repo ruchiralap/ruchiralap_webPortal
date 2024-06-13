@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { FaOpencart, FaSearch } from "react-icons/fa";
+import { FaOpencart } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
+import { IoIosSearch } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";
 import logo from "../../assets/logo.png";
 import SearchModal from "./SearchModal";
@@ -46,18 +47,27 @@ const Navbar = () => {
         <div>
           {/* Section For Mobile Menu Start */}
           <section className="lg:hidden flex items-center gap-4 px-3">
+            <div className=" hidden sm:flex items-center gap-3">
+              <div>
+                <BiSupport className=" text-black text-3xl md:text-5xl" />
+              </div>
+              <div className=" text-black">
+                <p>24/7 Support</p>
+                <p>+880 01770064053</p>
+              </div>
+            </div>
             <div>
               <button
-                className=" border border-[#EEAB0F] p-3 rounded-md"
+                className=" border border-[#EEAB0F] p-2 rounded-md"
                 onClick={() =>
                   document.getElementById("my_modal_5").showModal()
                 }
               >
-                <FaSearch className="md:text-2xl text-xl text-black " />
+                <IoIosSearch className="md:text-2xl text-xl text-black " />
               </button>
               <SearchModal />
             </div>
-            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-3 rounded-md">
+            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-2 rounded-md">
               <FaOpencart className="md:text-2xl text-xl text-black " />
             </div>
           </section>
