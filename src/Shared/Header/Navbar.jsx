@@ -5,8 +5,12 @@ import { IoIosSearch } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";
 import logo from "../../assets/logo.png";
 import SearchModal from "./SearchModal";
+import { useContext } from "react";
+import { FilterContext } from "../../Context/FilterProvider";
 
 const Navbar = () => {
+  const { handleInputChange } = useContext(FilterContext);
+
   return (
     <>
       <section className=" text-[#FFF3BC] flex items-center justify-between">
@@ -32,15 +36,18 @@ const Navbar = () => {
             <input
               className=" rounded-l-full px-5 py-3 focus:outline-none text-black bg-transparent border border-[#EEAB0F] w-full"
               type="search"
+              onChange={handleInputChange}
               name=""
               id=""
               placeholder="Search product's..."
             />
           </div>
           <div>
-            <button className="bg-[#EEAB0F] text-white py-[13px] px-12 rounded-r-full">
-              Search
-            </button>
+            <Link to="/allProducts">
+              <button className="bg-[#EEAB0F] text-white py-[13px] px-12 rounded-r-full">
+                Search
+              </button>
+            </Link>
           </div>
         </div>
         {/* Icons */}
