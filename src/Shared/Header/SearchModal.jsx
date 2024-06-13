@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FilterContext } from "../../Context/FilterProvider";
+import useCategory from "../../Hooks/useCategory";
 
 const SearchModal = () => {
   const { handleInputChange } = useContext(FilterContext);
+  const [allCategory] = useCategory();
 
   return (
     <>
@@ -11,8 +13,20 @@ const SearchModal = () => {
 
       <dialog id="my_modal_5" className="modal modal-top">
         <div className="modal-box rounded-none">
-          <div className=" grid">
-            <div className=" w-full">
+          <div>
+            <div>
+              <p className="text-[#201700] font-semibold pb-2">Recommended:</p>
+            </div>
+            <div className=" flex flex-wrap items-center gap-2">
+              {allCategory?.map((itm) => (
+                <div key={itm?._id}>
+                  <div className="text-[#201700] border border-[#EEAB0F] rounded-md px-2 py-1">
+                    {itm?.category_name}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className=" w-full mt-5">
               <input
                 className="px-5 py-3 focus:outline-none text-black bg-transparent border border-[#EEAB0F] w-full"
                 type="search"
