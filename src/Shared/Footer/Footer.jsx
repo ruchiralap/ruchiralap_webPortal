@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png";
 const Footer = () => {
   return (
     <>
-      <section className="bg-[#201700] px-10 py-20 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
+      <section className="bg-[#201700] px-5 md:px-10 py-20 grid grid-cols-1 md:grid-cols-7 gap-5 mt-20">
         <div className=" col-span-full md:col-span-3">
           <div className="">
             <Link to="/">
@@ -30,7 +30,7 @@ const Footer = () => {
             <Linkedin className=" bg-sky-500 text-white rounded-md p-1 hover:cursor-pointer footerIcons" />
           </div>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 col-span-full md:col-span-4">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-5 col-span-full lg:col-span-4">
           <div className=" menu space-y-1 font-medium">
             <h6 className=" text-2xl text-[#FCFCFC] font-semibold mb-2">
               Services
@@ -53,13 +53,13 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <h6 className="text-2xl text-[#FCFCFC] font-semibold mb-2">
+            <h6 className="text-2xl text-[#FCFCFC] font-semibold mb-1">
               Newsletter
             </h6>
             <p className=" text-gray-200">
               cultivating the soil, growing crops.
             </p>
-            <section className=" mt-2 flex items-center justify-start">
+            <section className=" mt-5 flex items-center justify-start">
               <div>
                 <input
                   className=" focus:outline-none border-none bg-[#FFFBE8] rounded-l-md px-5 py-2"

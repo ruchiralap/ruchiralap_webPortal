@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useAllProducts from "../../Hooks/useAllProducts";
-import ProductsCard from "./ProductsCard";
+import CategoryProductsCard from "./CategoryProductsCard";
 
 const CategoryWiseProducts = () => {
   const [allProducts] = useAllProducts();
@@ -18,7 +18,7 @@ const CategoryWiseProducts = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-11/12 mx-auto mt-20">
         {products &&
           products?.map((product) => (
-            <ProductsCard key={product?._id} product={product} />
+            <CategoryProductsCard key={product?._id} product={product} />
           ))}
       </div>
     </>

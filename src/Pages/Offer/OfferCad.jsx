@@ -7,7 +7,7 @@ const OfferCad = ({ itm }) => {
 
   return (
     <>
-      <div className=" border-none shadow-md px-8 pt-8 pb-2 bg-white rounded-xl hover:rounded-none">
+      <div className=" border-none shadow-md px-8 pt-8 pb-2 bg-[#FAEFD4] rounded-xl hover:rounded-none">
         <h2 className=" text-2xl font-extrabold">{title}</h2>
         <p className=" mt-1 text-sm font-medium">{des}</p>
         <div className=" flex items-center justify-between mt-8">

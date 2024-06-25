@@ -1,8 +1,7 @@
-import Card from "../../../Hooks/Card";
+import Card from "../../Hooks/Card";
 
-const ProductsCard = ({ product }) => {
+const CategoryProductsCard = ({ product }) => {
   const { product_name, product_image, price, _id } = product || {};
-
   return (
     <>
       <Card
@@ -15,4 +14,4 @@ const ProductsCard = ({ product }) => {
   );
 };
 
-export default ProductsCard;
+export default CategoryProductsCard;
