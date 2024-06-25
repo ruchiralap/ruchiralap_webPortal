@@ -70,7 +70,7 @@ const Contact = () => {
                           className={`${
                             errMsg === "Username is required!" &&
                             "outline-designColor"
-                          } contactInput bg-white border border-white/30 text-gray-900`}
+                          } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
                           type="text"
                         />
                       </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                           className={`${
                             errMsg === "Phone number is required!" &&
                             "outline-designColor"
-                          } contactInput bg-white border border-white/30 text-gray-900`}
+                          } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
                           type="text"
                         />
                       </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                         className={`${
                           errMsg === "Please give your Email!" &&
                           "outline-designColor"
-                        } contactInput bg-white border border-white/30 text-gray-900`}
+                        } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
                         type="email"
                       />
                     </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                         className={`${
                           errMsg === "Plese give your Subject!" &&
                           "outline-designColor"
-                        } contactInput bg-white border border-white/30 text-gray-900`}
+                        } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
                         type="text"
                       />
                     </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                         className={`${
                           errMsg === "Message is required!" &&
                           "outline-designColor"
-                        } contactTextArea bg-white border border-white/30 text-gray-900`}
+                        } contactTextArea bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
                         cols="30"
                         rows="8"
                       ></textarea>
