@@ -1,8 +1,7 @@
-import IsProductCard from "../../../Hooks/IsProductCard";
+import IsProductCard from "../../Hooks/IsProductCard";
 
-const ProductsCard = ({ product }) => {
+const CategoryProductsCard = ({ product }) => {
   const { product_name, product_image, price, _id } = product || {};
-
   return (
     <>
       <IsProductCard
@@ -15,4 +14,4 @@ const ProductsCard = ({ product }) => {
   );
 };
 
-export default ProductsCard;
+export default CategoryProductsCard;
