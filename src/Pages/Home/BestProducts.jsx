@@ -1,20 +1,33 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import Swal from "sweetalert2";
 import useAllProducts from "../../Hooks/useAllProducts";
 import { MdAddShoppingCart } from "react-icons/md";
 import SectionTitle from "../../Hooks/SectionTitle";
+import { useCart } from "../../Context/CartContext";
 
 const BestProducts = () => {
   const [allProducts] = useAllProducts();
   const { scrollY } = useViewportScroll();
+  const { addToCart } = useCart();
 
-  // Scroll up animation
   const yScrollUp = useTransform(scrollY, [0, 700], [50, 0]);
   const opacityScrollUp = useTransform(scrollY, [0, 300], [0, 1]);
 
-  // Scroll down animation
   const yScrollDown = useTransform(scrollY, [0, 300], [-50, 0]);
   const opacityScrollDown = useTransform(scrollY, [0, 300], [0, 1]);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    Swal.fire({
+      icon: "success",
+      title: "Added to cart",
+      text: `${product.product_name} has been added to your cart.`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   return (
     <>
@@ -63,7 +76,10 @@ const BestProducts = () => {
                     </p>
                   </div>
                   <div>
-                    <button className="p-3 rounded-full bg-[#FFFBE8] hover:bg-[#EEAB0F] hover:text-white transition-colors duration-300">
+                    <button
+                      className="p-3 rounded-full bg-[#FFFBE8] hover:bg-[#EEAB0F] hover:text-white transition-colors duration-300"
+                      onClick={() => handleAddToCart(product)}
+                    >
                       <MdAddShoppingCart className="text-2xl" />
                     </button>
                   </div>
