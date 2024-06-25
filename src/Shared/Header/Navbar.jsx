@@ -7,6 +7,7 @@ import logo from "../../assets/logo.png";
 import SearchModal from "./SearchModal";
 import { useContext } from "react";
 import { FilterContext } from "../../Context/FilterProvider";
+import Cart from "../../Pages/Cart/Cart";
 
 const Navbar = () => {
   const { handleInputChange } = useContext(FilterContext);
@@ -74,9 +75,7 @@ const Navbar = () => {
               </button>
               <SearchModal />
             </div>
-            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-2 rounded-md">
-              <FaOpencart className="md:text-2xl text-xl text-black " />
-            </div>
+            <Cart />
           </section>
           {/* Section For Mobile Menu End */}
           <div className="hidden lg:flex items-center gap-1 md:gap-3 lg:gap-4 md:px-10 px-2 justify-end">
@@ -94,9 +93,7 @@ const Navbar = () => {
                 <MdAddIcCall className="md:text-2xl text-black" />
               </Link>
             </div>
-            <div className=" hover:cursor-pointer border border-[#EEAB0F] p-1 rounded-md">
-              <FaOpencart className="md:text-2xl text-black " />
-            </div>
+            <Cart />
           </div>
         </div>
       </section>
