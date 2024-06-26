@@ -61,18 +61,17 @@ const FilterProvider = ({ children }) => {
       ({ price }) =>
         parseFloat(price) >= minPrice && parseFloat(price) <= maxPrice
     );
-
-    return filteredProducts.map(
-      ({ product_name, product_image, price, _id }) => (
-        <Card
-          key={_id}
-          product_name={product_name}
-          product_image={product_image}
-          price={price}
-          _id={_id}
-        />
-      )
-    );
+    ///product_name, product_image, price, _id,
+    return filteredProducts.map((product) => (
+      <Card
+        key={product?._id}
+        product_name={product?.product_name}
+        product_image={product?.product_image}
+        price={product?.price}
+        _id={product?._id}
+        product={product}
+      />
+    ));
   }
 
   const result = filteredData(
