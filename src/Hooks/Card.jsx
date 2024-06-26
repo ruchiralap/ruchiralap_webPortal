@@ -2,8 +2,21 @@
 import { Link } from "react-router-dom";
 import { MdAddShoppingCart } from "react-icons/md";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
+import { useCart } from "../Context/CartContext";
 
-const Card = ({ product_name, product_image, price, _id }) => {
+const Card = ({ product_name, product_image, price, _id, product }) => {
+  const { addToCart } = useCart();
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    Swal.fire({
+      icon: "success",
+      title: "Added to cart",
+      text: `${product.product_name} has been added to your cart.`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
   return (
     <>
       <section className="hover:cursor-pointer">
@@ -42,7 +55,10 @@ const Card = ({ product_name, product_image, price, _id }) => {
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <MdAddShoppingCart className="text-xl" />
+              <MdAddShoppingCart
+                onClick={() => handleAddToCart(product)}
+                className="text-xl"
+              />
             </motion.button>
           </div>
         </div>

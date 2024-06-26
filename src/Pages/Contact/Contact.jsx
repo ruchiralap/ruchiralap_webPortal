@@ -1,5 +1,5 @@
 import SharedBanner from "../../Shared/SharedBanner/SharedBanner";
-import  { useState } from "react";
+import { useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { BookOpenText, Clock, MapPin } from "lucide-react";
@@ -42,9 +42,9 @@ const Contact = () => {
               WE WOULD LOVE TO HEAR FROM YOU
             </p>
             <div className="mx-auto flex justify-center rounded-2xl">
-              <div className="w-full h-auto flex flex-col justify-center p-4">
+              <div className="w-full h-auto  flex flex-col justify-center p-4">
                 {/* <ContactLeft /> */}
-                <div className="w-full h-full py-10 flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-lg ">
+                <div className="w-full border-t-4 border-yellow-400 h-full py-10 flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-lg ">
                   <form
                     ref={form}
                     onSubmit={sendEmail}
@@ -70,7 +70,7 @@ const Contact = () => {
                           className={`${
                             errMsg === "Username is required!" &&
                             "outline-designColor"
-                          } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
+                          } input input-bordered text-gray-900`}
                           type="text"
                         />
                       </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                           className={`${
                             errMsg === "Phone number is required!" &&
                             "outline-designColor"
-                          } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
+                          } input-bordered input text-gray-900`}
                           type="text"
                         />
                       </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                         className={`${
                           errMsg === "Please give your Email!" &&
                           "outline-designColor"
-                        } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
+                        } contactInput input-bordered input `}
                         type="email"
                       />
                     </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                         className={`${
                           errMsg === "Plese give your Subject!" &&
                           "outline-designColor"
-                        } contactInput bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
+                        } input-bordered input text-gray-900`}
                         type="text"
                       />
                     </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                         className={`${
                           errMsg === "Message is required!" &&
                           "outline-designColor"
-                        } contactTextArea bg-[#FFFCEF] focus:outline-none border-b-2 p-2 border-[#FBCC16] shadow-md text-gray-900`}
+                        } text-gray-900 input-bordered input`}
                         cols="30"
                         rows="8"
                       ></textarea>
@@ -134,7 +134,7 @@ const Contact = () => {
               Send Message
             </button> */}
                       <input
-                        className="w-full h-12  border mt-7  rounded-full px-12 py-4  text-[#201700] bg-[#F9C302] font-extrabold"
+                        className="w-full btn h-12  border mt-7  rounded-full px-12 py-4  text-[#201700] bg-[#F9C302] font-extrabold"
                         type="submit"
                         value="Send"
                       />

@@ -12,6 +12,7 @@ const TrendingCard = ({ items }) => {
             product_image={product?.product_image}
             price={product?.price}
             _id={product?._id}
+            product={product}
           />
         ))}
       </section>
