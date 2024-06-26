@@ -2,8 +2,9 @@ import React from "react";
 import { FaOpencart } from "react-icons/fa";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-import { MdAdd, MdRemove, MdDelete, MdAddShoppingCart } from "react-icons/md";
+import { MdAdd, MdRemove, MdDelete } from "react-icons/md";
 import { useCart } from "../../Context/CartContext";
+import OrderModal from "./OrderModal";
 
 const Cart = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -52,7 +53,7 @@ const Cart = () => {
                       <img
                         src={product.product_image}
                         alt={product.product_name}
-                        className="w-16 h-16 object-cover rounded-md"
+                        className="w-24 h-16 object-cover rounded-md"
                       />
                       <div className="ml-4">
                         <h3 className="text-lg font-semibold">
@@ -90,25 +91,24 @@ const Cart = () => {
             </div>
 
             <section className=" bg-[#FBEFD4]">
-              <div className=" p-4">
-                <div className="flex items-center justify-between text-black font-semibold">
-                  <p>Subtotal</p>
-                  <p>
-                    Tk <span>{subtotal.toFixed(2)}</span>
-                  </p>
+              {cart.length > 0 && (
+                <div className=" p-4">
+                  <div className="flex items-center justify-between text-black font-semibold">
+                    <p>Subtotal</p>
+                    <p>
+                      Tk <span>{subtotal.toFixed(2)}</span>
+                    </p>
+                  </div>
+                  <div className="mt-8">
+                    <OrderModal />
+                  </div>
+                  <div>
+                    <button className="btn w-[100%] bg-[#FBEFD4] border-none shadow-none hover:bg-[#FBEFD4] hover:shadow-none text-black text-xl font-medium mt-2 underline">
+                      View Cart
+                    </button>
+                  </div>
                 </div>
-                <div className="mt-8">
-                  <button className="btn w-[100%] text-[#201700] bg-[#EEAB0F] hover:bg-[#EEAB0F] font-semibold flex items-center transition hover:scale-105 border-none rounded-none hover:rounded-md">
-                    <MdAddShoppingCart className="text-2xl text-center" />
-                    ক্যাশ অন ডেলিভারিতে অর্ডার করুন
-                  </button>
-                </div>
-                <div>
-                  <button className="btn w-[100%] bg-[#FBEFD4] border-none shadow-none hover:bg-[#FBEFD4] hover:shadow-none text-black text-xl font-medium mt-2 underline">
-                    View Cart
-                  </button>
-                </div>
-              </div>
+              )}
             </section>
           </div>
         </Drawer>
