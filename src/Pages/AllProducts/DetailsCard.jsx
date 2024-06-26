@@ -1,7 +1,20 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
+import { useCart } from "../../Context/CartContext";
+import Swal from "sweetalert2";
 
 const DetailsCard = ({ productDetail }) => {
+  const { addToCart } = useCart();
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    Swal.fire({
+      icon: "success",
+      title: "Added to cart",
+      text: `${product.product_name} has been added to your cart.`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
   const {
     product_name,
     category_name,
@@ -48,6 +61,7 @@ const DetailsCard = ({ productDetail }) => {
           <p className=" mt-2 text-sm">{description}</p>
           <div className=" grid md:flex items-center justify-between gap-3 mt-10">
             <motion.button
+              onClick={() => handleAddToCart(productDetail)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="bg-[#F6CF0F] font-semibold rounded-full w-full py-2"
@@ -55,6 +69,7 @@ const DetailsCard = ({ productDetail }) => {
               Add to cart
             </motion.button>
             <motion.button
+              onClick={() => handleAddToCart(productDetail)}
               whileHover={{
                 scale: 1.05,
                 backgroundColor: "#F6CF0F",
