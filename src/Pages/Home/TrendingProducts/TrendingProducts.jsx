@@ -5,6 +5,8 @@ import useCategory from "../../../Hooks/useCategory";
 import useAllProducts from "../../../Hooks/useAllProducts";
 import TrendingCard from "./TrendingCard";
 import { motion } from "framer-motion";
+import { useCart } from "../../../Context/CartContext";
+import Swal from "sweetalert2";
 
 const tabVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -14,6 +16,7 @@ const tabVariants = {
 const TrendingProducts = () => {
   const [allCategory] = useCategory();
   const [allProducts] = useAllProducts();
+  const { addToCart } = useCart();
 
   return (
     <>
