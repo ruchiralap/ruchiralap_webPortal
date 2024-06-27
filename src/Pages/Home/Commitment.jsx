@@ -5,7 +5,7 @@ import honey from "../../assets/honneyCommitment.png";
 
 const Commitment = () => {
   return (
-    <section className="md:bg-commitment-bg bg-no-repeat bg-cover mt-36">
+    <section className="md:bg-commitment-bg bg-no-repeat bg-cover mt-36 p-10 mx-auto max-w-7xl">
       <div className="flex items-center justify-center">
         <motion.img
           src={honey}

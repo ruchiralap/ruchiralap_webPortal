@@ -69,6 +69,7 @@ const DetailsCard = ({ productDetail }) => {
               Add to cart
             </motion.button>
             <motion.button
+              onClick={() => handleAddToCart(productDetail)}
               whileHover={{
                 scale: 1.05,
                 backgroundColor: "#F6CF0F",
