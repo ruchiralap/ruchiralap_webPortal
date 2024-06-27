@@ -8,19 +8,12 @@ import OrderModal from "./OrderModal";
 
 const Cart = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const { cart, increaseQuantity, decreaseQuantity, removeProduct } = useCart();
+  const { cart, increaseQuantity, decreaseQuantity, removeProduct, subtotal } =
+    useCart();
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
-
-  const calculateSubtotal = () => {
-    return cart.reduce((total, product) => {
-      return total + product.price * product.quantity;
-    }, 0);
-  };
-
-  const subtotal = calculateSubtotal();
 
   return (
     <>

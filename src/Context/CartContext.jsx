@@ -55,6 +55,14 @@ const CartProvider = ({ children }) => {
     setCart(cart.filter((item) => item._id !== productId));
   };
 
+  const calculateSubtotal = () => {
+    return cart.reduce((total, product) => {
+      return total + product.price * product.quantity;
+    }, 0);
+  };
+
+  const subtotal = calculateSubtotal();
+
   return (
     <CartContext.Provider
       value={{
@@ -63,6 +71,7 @@ const CartProvider = ({ children }) => {
         increaseQuantity,
         decreaseQuantity,
         removeProduct,
+        subtotal,
       }}
     >
       {children}

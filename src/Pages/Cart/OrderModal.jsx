@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 import { Modal } from "antd";
+import OrderForm from "./OrderForm";
 
 const OrderModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,14 +26,20 @@ const OrderModal = () => {
         ক্যাশ অন ডেলিভারিতে অর্ডার করুন
       </button>
       <Modal
-        title="Basic Modal"
         open={isModalOpen}
+        footer={false}
         onOk={handleOk}
         onCancel={handleCancel}
+        // style={{ backgroundColor: "#FFFBE8" }}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <div className="">
+          <section>
+            <h2 className=" text-center text-3xl font-bold p-5">
+              ক্যাশ অন ডেলিভারিতে অর্ডার করতে আপনার তথ্য দিন
+            </h2>
+            <OrderForm />
+          </section>
+        </div>
       </Modal>
     </>
   );
