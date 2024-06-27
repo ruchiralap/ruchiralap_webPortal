@@ -115,12 +115,19 @@ const OrderForm = () => {
                   <div>
                     <div className="flex text-black items-center justify-between">
                       <div className=" flex items-center px-2">
-                        <div className=" border rounded-md my-2 p-1">
+                        <div className="border border-[#FDEFD4] rounded-md my-2 px-2 relative">
                           <img
                             src={product.product_image}
                             alt={product.product_name}
                             className="w-12 h-16 object-cover rounded-md"
                           />
+                          <div className="avatar placeholder absolute -top-2 -right-2">
+                            <div className="bg-[#FDEFD4] text-black w-6 rounded-full">
+                              <span className="text-xs">
+                                {product?.quantity}
+                              </span>
+                            </div>
+                          </div>
                         </div>
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold">
