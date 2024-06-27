@@ -1,8 +1,9 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { FaUser, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { useCart } from "../../Context/CartContext";
+import PrivateAxios from "../../Hooks/PrivateAxios";
+import Swal from "sweetalert2";
 
 const OrderForm = () => {
   const { cart, removeProduct, subtotal } = useCart();
@@ -34,25 +35,26 @@ const OrderForm = () => {
       })),
     };
 
-    console.log("orderDetails", orderDetails);
-
-    // try {
-    //   const response = await fetch("/api/orders", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(orderDetails),
-    //   });
-
-    //   if (response.ok) {
-    //     console.log("Order successfully submitted:", await response.json());
-    //   } else {
-    //     console.error("Failed to submit order:", response.statusText);
-    //   }
-    // } catch (error) {
-    //   console.error("Error submitting order:", error);
-    // }
+    PrivateAxios.post("addOrder", orderDetails, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        console.log(response.data);
+        if (response.data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Order Placed Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle errors if any
+      });
   };
 
   return (
