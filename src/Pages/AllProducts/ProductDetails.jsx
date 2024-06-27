@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <section className=" w-11/12 mx-auto">
+      <section className="p-10 mx-auto max-w-7xl">
         <div>
           <DetailsCard productDetail={productDetail} />
         </div>
