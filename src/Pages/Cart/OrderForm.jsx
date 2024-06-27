@@ -12,12 +12,51 @@ const OrderForm = () => {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-
   const deliveryOption = watch("deliveryOption", "Dhaka City");
 
+  const calculateTotalPrice = () => {
+    const deliveryFee = deliveryOption === "Dhaka City" ? 70 : 130;
+    return (subtotal + deliveryFee).toFixed(2);
+  };
+
+  const onSubmit = async (data) => {
+    const orderDetails = {
+      ...data,
+      subtotal: subtotal.toFixed(2),
+      total: calculateTotalPrice(),
+      deliveryFee: deliveryOption === "Dhaka City" ? 70 : 130,
+      deliveryOption,
+      products: cart.map((product) => ({
+        id: product._id,
+        name: product.product_name,
+        price: product.price,
+        quantity: product.quantity,
+      })),
+    };
+
+    console.log("orderDetails", orderDetails);
+
+    // try {
+    //   const response = await fetch("/api/orders", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(orderDetails),
+    //   });
+
+    //   if (response.ok) {
+    //     console.log("Order successfully submitted:", await response.json());
+    //   } else {
+    //     console.error("Failed to submit order:", response.statusText);
+    //   }
+    // } catch (error) {
+    //   console.error("Error submitting order:", error);
+    // }
+  };
+
   return (
-    <div className=" bg-white">
+    <div className="bg-white">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">আপনার নাম</label>
@@ -114,7 +153,7 @@ const OrderForm = () => {
                   <hr />
                   <div>
                     <div className="flex text-black items-center justify-between">
-                      <div className=" flex items-center px-2">
+                      <div className="flex items-center px-2">
                         <div className="border border-[#FDEFD4] rounded-md my-2 px-2 relative">
                           <img
                             src={product.product_image}
@@ -135,7 +174,7 @@ const OrderForm = () => {
                           </h3>
                         </div>
                       </div>
-                      <div className=" flex items-center justify-between">
+                      <div className="flex items-center justify-between">
                         <p className="text-sm">Tk {product.price}</p>
                         <button
                           onClick={() => removeProduct(product._id)}
@@ -167,15 +206,9 @@ const OrderForm = () => {
             <span>সর্বমোট</span>
             <span>
               {deliveryOption === "Dhaka City" ? (
-                <>
-                  <div>
-                    <span>Tk {(subtotal + 70).toFixed(2)}</span>
-                  </div>
-                </>
+                <span>Tk {(subtotal + 70).toFixed(2)}</span>
               ) : (
-                <>
-                  <span>Tk {(subtotal + 130).toFixed(2)}</span>
-                </>
+                <span>Tk {(subtotal + 130).toFixed(2)}</span>
               )}
             </span>
           </div>
