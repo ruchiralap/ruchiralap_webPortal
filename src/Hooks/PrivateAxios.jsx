@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const PrivateAxios = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://ruchir-alap-backend.vercel.app",
   withCredentials: true,
 });
 
