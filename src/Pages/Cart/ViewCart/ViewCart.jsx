@@ -16,47 +16,48 @@ const ViewCart = () => {
               {cart?.length > 0 ? (
                 cart?.map((product) => (
                   <div key={product._id}>
-                    <hr />
-                    <div className="bg-[#FCEFD4] p-4 flex items-center text-center justify-between">
-                      <div>
+                    <div className="bg-[#FCEFD4] shadow-md border border-[#EEAB0F] p-1 md:p-4 flex items-center gap-2 text-center justify-between">
+                      <div className="">
                         <img
-                          className=" w-44"
+                          className="w-44"
                           src={product.product_image}
                           alt=""
                         />
                       </div>
-                      <div>
-                        <h3 className="text-lg font-semibold">
-                          {product.product_name}
-                        </h3>
-                      </div>
-                      <div className=" flex items-center">
-                        <p className="text-sm text-[#EEAB0F] font-semibold">
-                          Tk {product.price}
-                        </p>
-                        <button
-                          onClick={() => removeProduct(product._id)}
-                          className="p-1 ml-4"
-                        >
-                          <MdDelete className="text-xl text-red-500" />
-                        </button>
-                      </div>
-                      <div className=" flex items-center gap-3">
-                        <button
-                          onClick={() => decreaseQuantity(product._id)}
-                          className="p-2 hover:bg-[#f5e28a] bg-[#FFF3BC]"
-                        >
-                          <MdRemove className="text-xl" />
-                        </button>
-                        <span className="mx-2 font-semibold">
-                          {product.quantity}
-                        </span>
-                        <button
-                          onClick={() => increaseQuantity(product._id)}
-                          className="p-2 hover:bg-[#f5e28a] bg-[#FFF3BC]"
-                        >
-                          <MdAdd className="text-xl" />
-                        </button>
+                      <div className=" flex-1 grid space-y-3 lg:flex items-center justify-between">
+                        <div>
+                          <h3 className="lg:text-lg lg:font-semibold">
+                            {product.product_name}
+                          </h3>
+                        </div>
+                        <div className=" flex items-center gap-3 px-6">
+                          <p className="text-sm text-[#EEAB0F] font-semibold">
+                            Tk {product.price}
+                          </p>
+                          <button
+                            onClick={() => removeProduct(product._id)}
+                            className="p-1"
+                          >
+                            <MdDelete className="text-xl text-red-500" />
+                          </button>
+                        </div>
+                        <div className=" flex items-center gap-3">
+                          <button
+                            onClick={() => decreaseQuantity(product._id)}
+                            className="p-2 hover:bg-[#f5e28a] bg-[#FFF3BC]"
+                          >
+                            <MdRemove className="text-xl" />
+                          </button>
+                          <span className="mx-2 font-semibold">
+                            {product.quantity}
+                          </span>
+                          <button
+                            onClick={() => increaseQuantity(product._id)}
+                            className="p-2 hover:bg-[#f5e28a] bg-[#FFF3BC]"
+                          >
+                            <MdAdd className="text-xl" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
