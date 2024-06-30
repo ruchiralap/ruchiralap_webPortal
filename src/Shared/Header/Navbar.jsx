@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FaOpencart } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";

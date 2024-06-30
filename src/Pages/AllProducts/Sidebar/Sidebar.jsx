@@ -32,7 +32,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="drawer lg:drawer-open p-10 mx-auto max-w-7xl">
+      <div className="drawer lg:drawer-open p-5 lg:p-8 mx-auto max-w-7xl">
         <input
           id="my-drawer-2"
           type="checkbox"

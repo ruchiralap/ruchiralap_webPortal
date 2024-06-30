@@ -31,7 +31,7 @@ const BestProducts = () => {
 
   return (
     <>
-      <section className="mt-20 p-10 mx-auto max-w-7xl">
+      <section className="mt-20 p-5 lg:p-8 mx-auto max-w-7xl">
         <SectionTitle
           title="Most Popular & New Organic Food"
           details="The demand for organic food is growing at a remarkable rate. Consumers have made it want organic produce and every sector of the food."

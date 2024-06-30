@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import AllProducts from "../Pages/AllProducts/AllProducts";
 import ProductDetails from "../Pages/AllProducts/ProductDetails";
 import CategoryWiseProducts from "../Components/Category/CategoryWiseProducts";
+import ViewCart from "../Pages/Cart/ViewCart/ViewCart";
 
 const Router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const Router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/viewCart",
+        element: <ViewCart />,
       },
       {
         path: "/categoryWiseProducts/:id/:category_name",
