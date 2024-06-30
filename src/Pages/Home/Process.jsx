@@ -29,7 +29,7 @@ const Process = () => {
   return (
     <>
       <section className="bg-[#ECE7D4] ">
-        <div className="p-10 mx-auto max-w-7xl md:flex items-center justify-around gap-16 md:p-10 mb-10 md:mb-20 mt-10 md:mt-20">
+        <div className="p-5 lg:p-8 mx-auto max-w-7xl md:flex items-center justify-around gap-16 md:p-10 mb-10 md:mb-20 mt-10 md:mt-20">
           <div className="flx1">
             <motion.img
               className="w-full"

@@ -10,7 +10,7 @@ const Category = () => {
 
   return (
     <>
-      <div className="mt-44 p-10 mx-auto max-w-7xl">
+      <div className="mt-44 p-5 lg:p-8 mx-auto max-w-7xl">
         <div>
           <SectionTitle title="Browse Our Hottest Categories" />
         </div>

@@ -5,6 +5,7 @@ import "react-modern-drawer/dist/index.css";
 import { MdAdd, MdRemove, MdDelete } from "react-icons/md";
 import { useCart } from "../../Context/CartContext";
 import OrderModal from "./OrderModal";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -87,7 +88,11 @@ const Cart = () => {
                       </div>
                     ))
                   ) : (
-                    <p className="text-black">Your cart is empty.</p>
+                    <div className=" flex flex-col h-screen items-center justify-center">
+                      <p className="text-black text-3xl font-extrabold">
+                        Your cart is empty.
+                      </p>
+                    </div>
                   )}
                 </div>
               </div>
@@ -106,9 +111,11 @@ const Cart = () => {
                     <OrderModal />
                   </div>
                   <div>
-                    <button className="btn w-[100%] bg-[#FBEFD4] border-none shadow-none hover:bg-[#FBEFD4] hover:shadow-none text-black text-xl font-medium mt-2 underline">
-                      View Cart
-                    </button>
+                    <Link to="/viewCart">
+                      <button className="btn w-[100%] bg-[#FBEFD4] border-none shadow-none hover:bg-[#FBEFD4] hover:shadow-none text-black text-xl font-medium mt-2 underline">
+                        View Cart
+                      </button>
+                    </Link>
                   </div>
                 </div>
               )}
