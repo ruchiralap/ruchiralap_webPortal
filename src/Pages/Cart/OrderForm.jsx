@@ -35,24 +35,6 @@ const OrderForm = () => {
     };
 
     console.log("orderDetails", orderDetails);
-
-    // try {
-    //   const response = await fetch("/api/orders", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(orderDetails),
-    //   });
-
-    //   if (response.ok) {
-    //     console.log("Order successfully submitted:", await response.json());
-    //   } else {
-    //     console.error("Failed to submit order:", response.statusText);
-    //   }
-    // } catch (error) {
-    //   console.error("Error submitting order:", error);
-    // }
   };
 
   return (
