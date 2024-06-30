@@ -35,7 +35,7 @@ const Contact = () => {
         title="CONTACT US"
         image="https://www.synchotelier.com/wp-content/uploads/2024/03/contactus.webp"
       ></SharedBanner>
-      <div className="flex flex-col md:flex-row p-5 lg:p-8 mx-auto max-w-7xl">
+      <div className="flex flex-col md:flex-row p-5 lg:p-8 mx-auto max-w-full">
         <div className=" w-full">
           <section id="contact" className="w-full TEXT-BLACK py-20">
             <p className="text-2xl  font-bold capitalize text-center">

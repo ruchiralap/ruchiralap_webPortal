@@ -16,7 +16,7 @@ const ViewCart = () => {
               {cart?.length > 0 ? (
                 cart?.map((product) => (
                   <div key={product._id}>
-                    <div className="bg-[#FCEFD4] shadow-md border border-[#EEAB0F] p-1 md:p-4 flex items-center gap-2 text-center justify-between">
+                    <div className="bg-[#FCEFD4] shadow-md border-b border-[#EEAB0F] p-1 md:p-4 flex items-center gap-2 text-center justify-between">
                       <div className="">
                         <img
                           className="w-44"
