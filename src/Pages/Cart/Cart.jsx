@@ -41,7 +41,7 @@ const Cart = () => {
                 <div
                   className={`${
                     cart.length > 4 &&
-                    "overflow-y-auto max-h-[240px] lg:max-h-[390px]"
+                    "overflow-y-auto max-h-[240px] lg:max-h-[390px] cart-items-section"
                   }`}
                 >
                   {cart.length > 0 ? (
