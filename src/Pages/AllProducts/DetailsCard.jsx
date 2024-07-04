@@ -2,8 +2,9 @@
 import { motion } from "framer-motion";
 import { useCart } from "../../Context/CartContext";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
-const DetailsCard = ({ productDetail }) => {
+const DetailsCard = ({ productDetail, AccordionItem }) => {
   const { addToCart } = useCart();
   const handleAddToCart = (product) => {
     addToCart(product);
@@ -46,7 +47,7 @@ const DetailsCard = ({ productDetail }) => {
 
   return (
     <>
-      <section className=" grid md:flex gap-5 md:gap-10 mt-10">
+      <section className=" grid md:flex gap-5 md:gap-10">
         <div className=" flex-1">
           <img className=" w-full" src={product_image} alt="" />
         </div>
@@ -59,7 +60,7 @@ const DetailsCard = ({ productDetail }) => {
             <span>Tk</span> {price}
           </p>
           <p className=" mt-2 text-sm">{description}</p>
-          <div className=" grid md:flex items-center justify-between gap-3 mt-10">
+          <div className=" space-y-3 items-center justify-between gap-3 mt-10">
             <motion.button
               onClick={() => handleAddToCart(productDetail)}
               whileHover={{ scale: 1.1 }}
@@ -78,86 +79,86 @@ const DetailsCard = ({ productDetail }) => {
               whileTap={{ scale: 0.95 }}
               className="border border-[#F6CF0F] font-semibold rounded-full w-full py-2 px-5"
             >
-              ক্যাশ অন ডেলিভারিতে অর্ডার করুন
+              <Link to="/viewCart">ক্যাশ অন ডেলিভারিতে অর্ডার করুন</Link>
             </motion.button>
           </div>
           <div className=" mt-20">
-            <h2 className=" text-4xl font-extrabold text-[#201700]">
-              Description:
-            </h2>
-            <div className=" mt-5">
-              <h3 className=" text-2xl font-semibold text-[#201700]">
-                {description_title && description_title}
-              </h3>
-              <h3 className=" text-2xl font-semibold text-[#201700] mt-10">
-                {description_title_1 && description_title_1}
-              </h3>
-              <div className=" mt-4 space-y-1">
-                <p className=" px-5">{description_point_1_1}</p>
-                <p className=" px-5">
-                  {description_point_1_2 && description_point_1_2}
+            <h2 className=" text-4xl font-extrabold text-[#201700]"></h2>
+            <AccordionItem title="Description:">
+              <div className=" mt-5">
+                <h3 className=" text-2xl font-semibold text-[#201700]">
+                  {description_title && description_title}
+                </h3>
+                <h3 className=" text-2xl font-semibold text-[#201700] mt-10">
+                  {description_title_1 && description_title_1}
+                </h3>
+                <div className=" mt-4 space-y-1">
+                  <p className=" px-5">{description_point_1_1}</p>
+                  <p className=" px-5">
+                    {description_point_1_2 && description_point_1_2}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_1_3 && description_point_1_3}
+                  </p>
+                </div>
+                <p className=" text-2xl font-semibold mt-5 text-[#201700]">
+                  {description_title_2 && description_title_2}
                 </p>
-                <p className=" px-5">
-                  {description_point_1_3 && description_point_1_3}
+                <div className=" mt-4 space-y-1">
+                  <p className=" px-5">
+                    {description_point_2_1 && description_point_2_1}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_2_2 && description_point_2_2}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_2_3 && description_point_2_3}
+                  </p>
+                </div>
+                <p className=" text-2xl font-semibold mt-5 text-[#201700]">
+                  {description_title_3 && description_title_3}
                 </p>
+                <div className=" mt-4 space-y-1">
+                  <p className=" px-5">
+                    {description_point_3_1 && description_point_3_1}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_3_2 && description_point_3_2}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_3_3 && description_point_3_3}
+                  </p>
+                </div>
+                <p className=" text-2xl font-semibold mt-5 text-[#201700]">
+                  {description_title_4 && description_title_4}
+                </p>
+                <div className=" mt-4 space-y-1">
+                  <p className=" px-5">
+                    {description_point_4_1 && description_point_4_1}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_4_2 && description_point_4_2}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_4_3 && description_point_4_3}
+                  </p>
+                </div>
+                <p className=" text-2xl font-semibold mt-5 text-[#201700]">
+                  {description_title_5 && description_title_5}
+                </p>
+                <div className=" mt-4 space-y-1">
+                  <p className=" px-5">
+                    {description_point_5_1 && description_point_5_1}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_5_2 && description_point_5_2}
+                  </p>
+                  <p className=" px-5">
+                    {description_point_5_3 && description_point_5_3}
+                  </p>
+                </div>
               </div>
-              <p className=" text-2xl font-semibold mt-5 text-[#201700]">
-                {description_title_2 && description_title_2}
-              </p>
-              <div className=" mt-4 space-y-1">
-                <p className=" px-5">
-                  {description_point_2_1 && description_point_2_1}
-                </p>
-                <p className=" px-5">
-                  {description_point_2_2 && description_point_2_2}
-                </p>
-                <p className=" px-5">
-                  {description_point_2_3 && description_point_2_3}
-                </p>
-              </div>
-              <p className=" text-2xl font-semibold mt-5 text-[#201700]">
-                {description_title_3 && description_title_3}
-              </p>
-              <div className=" mt-4 space-y-1">
-                <p className=" px-5">
-                  {description_point_3_1 && description_point_3_1}
-                </p>
-                <p className=" px-5">
-                  {description_point_3_2 && description_point_3_2}
-                </p>
-                <p className=" px-5">
-                  {description_point_3_3 && description_point_3_3}
-                </p>
-              </div>
-              <p className=" text-2xl font-semibold mt-5 text-[#201700]">
-                {description_title_4 && description_title_4}
-              </p>
-              <div className=" mt-4 space-y-1">
-                <p className=" px-5">
-                  {description_point_4_1 && description_point_4_1}
-                </p>
-                <p className=" px-5">
-                  {description_point_4_2 && description_point_4_2}
-                </p>
-                <p className=" px-5">
-                  {description_point_4_3 && description_point_4_3}
-                </p>
-              </div>
-              <p className=" text-2xl font-semibold mt-5 text-[#201700]">
-                {description_title_5 && description_title_5}
-              </p>
-              <div className=" mt-4 space-y-1">
-                <p className=" px-5">
-                  {description_point_5_1 && description_point_5_1}
-                </p>
-                <p className=" px-5">
-                  {description_point_5_2 && description_point_5_2}
-                </p>
-                <p className=" px-5">
-                  {description_point_5_3 && description_point_5_3}
-                </p>
-              </div>
-            </div>
+            </AccordionItem>
           </div>
         </div>
       </section>
