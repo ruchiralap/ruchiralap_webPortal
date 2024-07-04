@@ -87,7 +87,7 @@ const BestProducts = () => {
               </motion.div>
             ))}
         </div>
-        <div className="flex justify-end items-center mt-10">
+        {/* <div className="flex justify-end items-center mt-10">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -95,7 +95,7 @@ const BestProducts = () => {
           >
             <Link to="/allProducts">See More...</Link>
           </motion.button>
-        </div>
+        </div> */}
       </section>
     </>
   );
