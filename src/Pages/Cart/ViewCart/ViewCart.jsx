@@ -78,12 +78,12 @@ const ViewCart = () => {
                     Subtotal ( <span>{cart?.length}</span> items )
                   </p>
                   <p className=" font-semibold">
-                    ৳ <span>{subtotal.toFixed(2)}</span>
+                    Tk <span>{subtotal.toFixed(2)}</span>
                   </p>
                 </div>
                 <div className=" flex items-center justify-between font-bold mt-5">
                   <p>Shipping Fee</p>
-                  <p>৳ 100</p>
+                  <p>Tk 100</p>
                 </div>
                 <div className=" flex items-center justify-between mt-5 font-semibold">
                   <p>Total</p>
