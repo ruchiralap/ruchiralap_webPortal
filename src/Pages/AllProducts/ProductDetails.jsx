@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import useAllProducts from "../../Hooks/useAllProducts";
 import DetailsCard from "./DetailsCard";
 import BestProducts from "../Home/BestProducts";
+import { PiCaretUpThin, PiCaretDownLight } from "react-icons/pi";
+import { useState } from "react";
 
 const ProductDetails = () => {
   const [allProducts] = useAllProducts();
@@ -37,11 +39,37 @@ const ProductDetails = () => {
     },
   ];
 
+  const AccordionItem = ({ title, children }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+      <div className=" border-b-2 border-[#F6CF0F] mt-6">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex justify-between items-center w-full p-4 focus:outline-none"
+        >
+          <span className="md:text-lg font-semibold text-start">{title}</span>
+          <span>
+            {isOpen ? (
+              <PiCaretUpThin className=" text-2xl" />
+            ) : (
+              <PiCaretDownLight className=" text-2xl" />
+            )}
+          </span>
+        </button>
+        {isOpen && <div className="p-4">{children}</div>}
+      </div>
+    );
+  };
+
   return (
     <>
       <section className="p-5 lg:p-8 mx-auto max-w-7xl">
         <div>
-          <DetailsCard productDetail={productDetail} />
+          <DetailsCard
+            productDetail={productDetail}
+            AccordionItem={AccordionItem}
+          />
         </div>
         <div></div>
       </section>
