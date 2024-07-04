@@ -20,8 +20,11 @@ const Cart = () => {
     <>
       <div
         onClick={toggleDrawer}
-        className="hover:cursor-pointer border border-[#EEAB0F] p-[10px] lg:p-1 rounded-md"
+        className="hover:cursor-pointer indicator border border-[#EEAB0F] p-[10px] lg:p-1 rounded-md"
       >
+        <span className="indicator-item badge border-none rounded-full bg-[#EEAB0F] text-white">
+          {cart.length}
+        </span>
         <FaOpencart className="md:text-2xl text-black " />
       </div>
       <div className="flex overflow-y-auto whitespace-nowrap">
