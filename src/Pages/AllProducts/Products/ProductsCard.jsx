@@ -1,4 +1,4 @@
-import Card from "../../../Hooks/Card";
+import Card from "../../../Hooks/Card";l
 
 const ProductsCard = ({ product }) => {
   const { product_name, product_image, price, _id } = product || {};

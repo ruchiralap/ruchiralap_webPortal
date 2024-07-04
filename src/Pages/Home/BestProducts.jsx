@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import Swal from "sweetalert2";
@@ -11,6 +11,7 @@ const BestProducts = () => {
   const [allProducts] = useAllProducts();
   const { scrollY } = useViewportScroll();
   const { addToCart } = useCart();
+  const [visibleProducts, setVisibleProducts] = useState(9);
 
   const yScrollUp = useTransform(scrollY, [0, 700], [50, 0]);
   const opacityScrollUp = useTransform(scrollY, [0, 300], [0, 1]);
@@ -29,6 +30,14 @@ const BestProducts = () => {
     });
   };
 
+  const handleSeeMore = () => {
+    setVisibleProducts(allProducts.length);
+  };
+
+  const handleSeeLess = () => {
+    setVisibleProducts(9);
+  };
+
   return (
     <>
       <section className="mt-20 p-5 lg:p-8 mx-auto max-w-7xl">
@@ -36,9 +45,9 @@ const BestProducts = () => {
           title="Most Popular & New Organic Food"
           details="The demand for organic food is growing at a remarkable rate. Consumers have made it want organic produce and every sector of the food."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
           {allProducts &&
-            allProducts.slice(0, 9).map((product, index) => (
+            allProducts.slice(0, visibleProducts).map((product, index) => (
               <motion.div
                 key={product?._id}
                 className=" bg-[#ce8e1e1b]"
@@ -49,21 +58,20 @@ const BestProducts = () => {
                 }
               >
                 <motion.div
-                  className=""
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Link to={`/productDetails/${product?._id}`}>
                     <motion.img
-                      className="w-full h-[320px] mx-auto rounded-3xl"
+                      className=" w-full object-cover object-center h-[320px] mx-auto"
                       src={product?.product_image}
                       alt="Product Image"
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     />
                   </Link>
                 </motion.div>
-                <div className="px-4 pb-8 flex items-center justify-between">
+                <div className="px-4 py-5 flex items-center justify-between">
                   <div className="text-[#443930]">
                     <Link to={`/productDetails/${product?._id}`}>
                       <h4 className="text-xl font-semibold">
@@ -87,15 +95,25 @@ const BestProducts = () => {
               </motion.div>
             ))}
         </div>
-        {/* <div className="flex justify-end items-center mt-10">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="bg-[#EEAB0F] text-white font-bold py-2 px-4"
-          >
-            <Link to="/allProducts">See More...</Link>
-          </motion.button>
-        </div> */}
+        {visibleProducts < allProducts.length ? (
+          <div className="flex justify-end mt-10">
+            <button
+              className=" px-5 py-2 bg-[#EEAB0F] text-white transition-colors duration-300"
+              onClick={handleSeeMore}
+            >
+              See More
+            </button>
+          </div>
+        ) : (
+          <div className="flex justify-end mt-10">
+            <button
+              className=" px-5 py-2 bg-[#EEAB0F] text-white transition-colors duration-300"
+              onClick={handleSeeLess}
+            >
+              See Less
+            </button>
+          </div>
+        )}
       </section>
     </>
   );

@@ -43,6 +43,7 @@ const DetailsCard = ({ productDetail, AccordionItem }) => {
     description_point_5_1,
     description_point_5_2,
     description_point_5_3,
+    weight,
   } = productDetail || {};
 
   return (
@@ -52,7 +53,9 @@ const DetailsCard = ({ productDetail, AccordionItem }) => {
           <img className=" w-full" src={product_image} alt="" />
         </div>
         <div className=" flex-1 mt-8">
-          <h2 className=" text-4xl font-semibold">{product_name}</h2>
+          <h2 className=" text-4xl font-semibold">
+            {product_name} (<span>{weight && weight}</span>)
+          </h2>
           <p className="text-[#1F2937] font-semibold mt-2 px-1">
             {category_name}
           </p>
