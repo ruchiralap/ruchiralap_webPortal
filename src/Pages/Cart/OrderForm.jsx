@@ -6,7 +6,7 @@ import PrivateAxios from "../../Hooks/PrivateAxios";
 import Swal from "sweetalert2";
 
 const OrderForm = () => {
-  const { cart, removeProduct, subtotal } = useCart();
+  const { cart, removeProduct, clearCart, subtotal } = useCart();
   const {
     register,
     handleSubmit,
@@ -33,28 +33,29 @@ const OrderForm = () => {
         price: product.price,
         quantity: product.quantity,
       })),
+      deliveryStatus: "pending",
     };
 
-    PrivateAxios.post("addOrder", orderDetails, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        console.log(response.data);
-        if (response.data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Order Placed Successfully",
-            icon: "success",
-            confirmButtonText: "Cool",
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        // Handle errors if any
+    try {
+      const response = await PrivateAxios.post("addOrder", orderDetails, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
+
+      if (response.data.insertedId) {
+        clearCart(); // Clear the cart after successful order placement
+        Swal.fire({
+          title: "Success!",
+          text: "Order Placed Successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle errors if any
+    }
   };
 
   return (
