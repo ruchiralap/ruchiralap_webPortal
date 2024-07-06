@@ -35,9 +35,9 @@ const Footer = () => {
             <h6 className=" text-2xl text-[#FCFCFC] font-semibold mb-2">
               Services
             </h6>
-            <Link to="/bestSell">
+            <Link to="/allProducts">
               <a className="link link-hover hover:text-green-500 text-slate-300">
-                Best Sell
+                Browse Products
               </a>
             </Link>
             <Link to="/about">
