@@ -83,7 +83,8 @@ const Cart = () => {
                       <div className="text-black">
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold">
-                            {product.product_name}
+                            {product.product_name} (
+                            <span>{product.weight && product.weight}</span>)
                           </h3>
                           <p>Tk {product.price}</p>
                         </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { useCart } from "../../../Context/CartContext";
 import { MdAdd, MdRemove, MdDelete } from "react-icons/md";
 import OrderModal from "../OrderModal";
@@ -27,7 +26,8 @@ const ViewCart = () => {
                       <div className=" flex-1 grid space-y-3 lg:flex items-center justify-between">
                         <div>
                           <h3 className="lg:text-lg lg:font-semibold">
-                            {product.product_name}
+                            {product.product_name} (
+                            <span>{product.weight && product.weight}</span>)
                           </h3>
                         </div>
                         <div className=" flex items-center gap-3 px-6">
