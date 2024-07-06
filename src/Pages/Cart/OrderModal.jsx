@@ -24,8 +24,8 @@ const OrderModal = () => {
         onClick={showModal}
         className="btn w-[100%] text-[#201700] bg-[#EEAB0F] hover:bg-[#EEAB0F] md:font-semibold flex items-center transition hover:scale-105 border-none rounded-none hover:rounded-md"
       >
-        <MdAddShoppingCart className="text-sm md:text-2xl text-center" />
-        ক্যাশ অন ডেলিভারিতে অর্ডার করুন <span>({cart?.length})</span>
+        <MdAddShoppingCart className="text-sm  text-center" />
+        ক্যাশ অন ডেলিভারিতে অর্ডার করুন
       </button>
       <Modal
         open={isModalOpen}

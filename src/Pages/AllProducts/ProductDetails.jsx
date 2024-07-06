@@ -21,19 +21,19 @@ const ProductDetails = () => {
   const features = [
     {
       id: 1,
-      icon: "/public/payment-method.png",
+      icon: "/payment-method.png",
       title: "নিরাপদ পেমেন্ট",
       description: "বিভিন্ন পেমেন্ট পদ্ধতি থেকে বেছে নিন",
     },
     {
       id: 2,
-      icon: "/public/fast-delivery.png",
+      icon: "/fast-delivery.png",
       title: "গ্রিন ডেলিভারি",
       description: "৩-৫ দিনের মধ্যে আপনার পন্য পৌছে যাবে",
     },
     {
       id: 3,
-      icon: "/public/eco-friendly.png",
+      icon: "/eco-friendly.png",
       title: "১০০% ন্যাচারাল",
       description: "প্রাকৃতিক উপাদান ব্যবহার করতে আমরা প্রতিশ্রুতিবদ্ধ",
     },
