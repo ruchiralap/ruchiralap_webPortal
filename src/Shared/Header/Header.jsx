@@ -84,7 +84,7 @@ function Header() {
             </div>
           </div>
           <div className=" px-5">
-            <h4>Welcome you to organic shop!</h4>
+            <h4>Welcome you to the organic shop!</h4>
           </div>
         </div>
       </div>
