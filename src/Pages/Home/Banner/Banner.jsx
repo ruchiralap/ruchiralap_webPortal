@@ -6,7 +6,7 @@ import useBanners from "../../../Hooks/useBanners";
 const Banner = () => {
   const [allBanners] = useBanners();
 
-  console.log("all banner: ", allBanners);
+  // console.log("all banner: ", allBanners);
   return (
     <div className="">
       <AwesomeSlider className="h-[80vh]  w-full">
