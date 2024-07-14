@@ -45,7 +45,7 @@ const OrderForm = () => {
       });
 
       if (response.data.insertedId) {
-        clearCart(); // Clear the cart after successful order placement
+        clearCart();
         Swal.fire({
           title: "Success!",
           text: "Order Placed Successfully",
@@ -136,7 +136,7 @@ const OrderForm = () => {
             )}
           </div>
         </div>
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label className="block text-gray-700 mb-2">কুপন কোড</label>
           <input
             type="text"
@@ -147,7 +147,7 @@ const OrderForm = () => {
           <button className="mt-2 w-full px-4 py-2 bg-[#EEAB0F] text-white rounded-md">
             এপ্লাই
           </button>
-        </div>
+        </div> */}
         {/* Product Showing */}
         <div className="py-5">
           <section>
@@ -226,7 +226,10 @@ const OrderForm = () => {
             placeholder="Order note"
           />
         </div>
-        <button className="w-full px-4 py-2 bg-[#EEAB0F] text-white font-bold rounded-md">
+        <button
+          type="submit"
+          className="w-full px-4 py-2 bg-[#EEAB0F] text-white font-bold rounded-md"
+        >
           আপনার অর্ডার কমপ্লিট করতে ক্লিক করুন
         </button>
         <p className="mt-2 text-center text-green-600">

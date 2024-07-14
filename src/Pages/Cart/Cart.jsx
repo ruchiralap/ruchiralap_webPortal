@@ -25,7 +25,6 @@ const Cart = () => {
     },
     "@media (max-width: 480px)": {
       maxWidth: "300px",
-
     },
   };
 
@@ -63,15 +62,15 @@ const Cart = () => {
             <div>
               <div
                 className={`${
-                  cart.length > 4 &&
+                  cart?.length > 3 &&
                   "overflow-y-auto max-h-[240px] lg:max-h-[390px] cart-items-section"
                 }`}
               >
-                {cart.length > 0 ? (
-                  cart.map((product) => (
+                {cart?.length > 0 ? (
+                  cart?.map((product) => (
                     <div
                       key={product._id}
-                      className="flex items-center justify-start gap-4 mb-4 border-b pb-2"
+                      className="flex items-center justify-start px-5 gap-4 mb-4 border-b pb-2"
                     >
                       <div className="flex text-black items-center">
                         <img
@@ -84,8 +83,7 @@ const Cart = () => {
                       <div className="text-black">
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold">
-                            {product.product_name} (
-                            <span>{product.weight && product.weight}</span>)
+                          {product.product_name}
                           </h3>
                           <p>Tk {product.price}</p>
                         </div>
