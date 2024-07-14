@@ -7,7 +7,7 @@ const useBanners = () => {
     refetch,
     isPending: loading,
   } = useQuery({
-    queryKey: ["allbanners"],
+    queryKey: ["allBanners"],
     queryFn: async () => {
       const res = await PrivateAxios.get("/banners");
       return res.data;
