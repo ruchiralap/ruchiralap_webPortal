@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Card from "../../Hooks/Card";
 
 const CategoryProductsCard = ({ product }) => {
@@ -9,6 +10,7 @@ const CategoryProductsCard = ({ product }) => {
         product_name={product_name}
         product_image={product_image}
         price={price}
+        product={product}
       />
     </>
   );

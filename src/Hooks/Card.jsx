@@ -23,7 +23,7 @@ const Card = ({ product_name, product_image, price, _id, product }) => {
         <Link to={`/productDetails/${_id}`}>
           <div className="bg-gradient-to-r from-[#f6edbd] via-[#FFFBE8] to-[#f6edbd]">
             <motion.img
-              className="w-full mx-auto"
+              className=" w-full h-[250px] mx-auto"
               src={product_image}
               alt=""
               whileHover={{ scale: 1.1, rotate: 2 }}
@@ -35,9 +35,10 @@ const Card = ({ product_name, product_image, price, _id, product }) => {
           <div className="text-[#443930]">
             <Link to={`/productDetails/${_id}`}>
               <h4 className="font-semibold">
-                {product_name.length > 50
+                {product_name.length < 25
                   ? product_name
-                  : product_name.slice(0, 30)}
+                  : product_name.slice(0, 25)}{" "}
+                <span>{product_name.length > 25 && "..."}</span>
               </h4>
             </Link>
             <p className="text-[#443930] font-medium mt-1 flex items-center gap-1">

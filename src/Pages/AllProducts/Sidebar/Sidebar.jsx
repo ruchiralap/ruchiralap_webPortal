@@ -4,10 +4,7 @@ import { FilterContext } from "../../../Context/FilterProvider";
 import { GoChevronDown } from "react-icons/go";
 import { RxCross2 } from "react-icons/rx";
 import Categories from "./Categories/Categories";
-import Price from "./Price/Price";
-import Size from "./Size/Size";
 import Products from "../Products/Products";
-import Colors from "./Colors/Colors";
 import { motion } from "framer-motion";
 
 const Sidebar = () => {
@@ -77,9 +74,6 @@ const Sidebar = () => {
               <RxCross2 className="text-xl" />
             </motion.div>
             <Categories handleChange={handleChange} />
-            {/* <Colors handleChange={handleChange} /> */}
-            {/* <Price handleChange={handleChange} /> */}
-            {/* <Size handleChange={handleChange} /> */}
           </section>
         </div>
       </div>

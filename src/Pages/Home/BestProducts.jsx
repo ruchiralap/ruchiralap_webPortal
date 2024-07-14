@@ -75,7 +75,10 @@ const BestProducts = () => {
                   <div className="text-[#443930]">
                     <Link to={`/productDetails/${product?._id}`}>
                       <h4 className="text-xl font-semibold">
-                        {product?.product_name}
+                        {product.product_name.length < 25
+                          ? product.product_name
+                          : product.product_name.slice(0, 25)}{" "}
+                        <span>{product.product_name.length > 25 && "..."}</span>
                       </h4>
                     </Link>
                     <p className="text-[#15120f] font-medium mt-1">

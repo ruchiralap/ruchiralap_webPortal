@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import useCategory from "../../Hooks/useCategory";
 import AnimatedButton from "../../Hooks/AnimatedButton";
 import SectionTitle from "../../Hooks/SectionTitle";
+import CategorySkeleton from "./CategorySkeleton";
 
 const Category = () => {
   const [allCategory] = useCategory();
@@ -15,45 +16,48 @@ const Category = () => {
           <SectionTitle title="Browse Our Hottest Categories" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
-          {allCategory &&
-            allCategory.map((category) => (
-              <motion.div
-                key={category?._id}
-                className=""
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Link
-                  to={`/categoryWiseProducts/${category?._id}/${category?.category_name}`}
+          {allCategory
+            ? allCategory.map((category) => (
+                <motion.div
+                  key={category?._id}
+                  className=""
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <div>
-                    <motion.div
-                      className="bg-[#FAEFD4] w-full h-[250px]"
-                      initial={{ scale: 0.9 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <motion.img
-                        className=" w-[250px] mx-auto rounded-full"
-                        src={category?.category_image}
-                        alt="Category Image"
-                        initial={{ clipPath: "circle(0% at 50% 50%)" }}
-                        animate={{ clipPath: "circle(50% at 50% 50%)" }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </motion.div>
-                    <div className="text-center">
-                      <AnimatedButton
-                        borderColor="border-[#EEAB0F]"
-                        text={category?.category_name}
-                      />
+                  <Link
+                    to={`/categoryWiseProducts/${category?._id}/${category?.category_name}`}
+                  >
+                    <div>
+                      <motion.div
+                        className="bg-[#FAEFD4] w-full h-[250px]"
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <motion.img
+                          className=" w-[250px] mx-auto rounded-full"
+                          src={category?.category_image}
+                          alt="Category Image"
+                          initial={{ clipPath: "circle(0% at 50% 50%)" }}
+                          animate={{ clipPath: "circle(50% at 50% 50%)" }}
+                          transition={{ duration: 0.5 }}
+                        />
+                      </motion.div>
+                      <div className="text-center">
+                        <AnimatedButton
+                          borderColor="border-[#EEAB0F]"
+                          text={category?.category_name}
+                        />
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              ))
+            : Array.from({ length: 4 }).map((_, index) => (
+                <CategorySkeleton key={index} />
+              ))}
         </div>
       </div>
     </>

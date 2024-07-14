@@ -4,9 +4,9 @@ import "react-awesome-slider/dist/styles.css";
 import useBanners from "../../../Hooks/useBanners";
 
 const Banner = () => {
-  const [allBanners, refetch, loading] = useBanners();
+  const [allBanners] = useBanners();
 
-  console.log("all banner: ", allBanners);
+  // console.log("all banner: ", allBanners);
   return (
     <div className="">
       <AwesomeSlider className="h-[80vh]  w-full">
