@@ -25,6 +25,7 @@ const Cart = () => {
     },
     "@media (max-width: 480px)": {
       maxWidth: "300px",
+
     },
   };
 
