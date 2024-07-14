@@ -83,7 +83,13 @@ const Cart = () => {
                       <div className="text-black">
                         <div className="ml-4">
                           <h3 className="text-lg font-semibold">
-                          {product.product_name}
+                            {product.product_name.length > 30 ? (
+                              <span>
+                                {product.product_name?.slice(0, 30)}...
+                              </span>
+                            ) : (
+                              product.product_name
+                            )}
                           </h3>
                           <p>Tk {product.price}</p>
                         </div>
