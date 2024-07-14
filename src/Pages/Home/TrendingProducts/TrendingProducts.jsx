@@ -20,7 +20,7 @@ const TrendingProducts = () => {
 
   return (
     <>
-      <div className="p-5 lg:p-8 mx-auto max-w-7xl">
+      <div id="trending" className="p-5 lg:p-8 mx-auto max-w-7xl ">
         <SectionTitle
           title="Our Trending Organic & Fresh Products"
           details="We connect buyers & sellers of natural, organic, environmentally sound products."
