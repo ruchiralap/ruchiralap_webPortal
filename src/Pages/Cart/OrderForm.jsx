@@ -32,6 +32,7 @@ const OrderForm = () => {
         name: product.product_name,
         price: product.price,
         quantity: product.quantity,
+        weight: product.weight,
       })),
       deliveryStatus: "pending",
     };
