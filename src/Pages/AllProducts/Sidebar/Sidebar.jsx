@@ -77,9 +77,9 @@ const Sidebar = () => {
               <RxCross2 className="text-xl" />
             </motion.div>
             <Categories handleChange={handleChange} />
-            <Colors handleChange={handleChange} />
-            <Price handleChange={handleChange} />
-            <Size handleChange={handleChange} />
+            {/* <Colors handleChange={handleChange} /> */}
+            {/* <Price handleChange={handleChange} /> */}
+            {/* <Size handleChange={handleChange} /> */}
           </section>
         </div>
       </div>
