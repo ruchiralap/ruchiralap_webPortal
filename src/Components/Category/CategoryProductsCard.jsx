@@ -10,6 +10,7 @@ const CategoryProductsCard = ({ product }) => {
         product_name={product_name}
         product_image={product_image}
         price={price}
+        product={product}
       />
     </>
   );
