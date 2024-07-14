@@ -18,7 +18,7 @@ const CategoryWiseProducts = () => {
         <div className="py-10">
           <h2 className="text-3xl font-semibold">
             <span>All </span>
-            <span className=" p-1 border-b border-[#EEAB0F]">
+            <span className=" p-1 border-b border-[#EEAB0F] text-[#EEAB0F]">
               {category_name}
             </span>{" "}
             <span>Products:</span>
